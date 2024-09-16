@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>块级元素 & 行内元素</title>
+    <style lang="scss">
+        .chy-div {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            margin: 5px auto;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .chy-span {
+            background-color: orange;
+        }
+
+        h4, h1, h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h4>块级元素：独占一行</h4>
+    <div class="chy-div">Sunnnnnny</div>
+    <div class="chy-div">Sunnnnnny</div>
+
+    <h1>Sunnnnny</h1>
+    <h2>Sunnnnny</h2>
+
+    <hr>
+    <h4>行内元素：不独占一行</h4>
+    <span class="chy-span">Sunnnnny</span>
+    <span class="chy-span">Sunnnnny</span>
+    <span class="chy-span">Sunnnnny</span>
+
+    <input type="text">
+    <input type="radio">
+    <input type="checkbox">
+    <input type="password">
+    <hr>
+
+    <h4>规则1：块级元素中<span style="color: green">可以写块级元素</span> 和 <span style="color: green">行内元素</span></h4>
+    <div style="background-color: deeppink">
+        <span>Sunnnnny</span>
+        <span>Sunnnnny</span>
+        <input type="password">
+        <div style="background-color: aqua">Sunnnnny</div>
+    </div>
+
+    <h4>规则2：行内元素中<span style="color: green"> 可以写行内元素</span><span style="color: red"> 但 不能写块级元素</span></h4>
+    <span style="color: orange">
+        <span>Sunnnnny</span>
+        <input type="password">
+        <span>Sunnnnny</span>
+    </span>
+</body>
+</html>
