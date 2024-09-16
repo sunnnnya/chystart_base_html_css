@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>普通超链接</title>
+    <style>
+        h4 {
+            text-align: center;
+        }
+
+        .chy-container {
+            text-align: center;
+        }
+
+        .chy-a {
+            text-decoration: none;
+            color: green;
+        }
+
+        .chy-a:hover {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h4>超链接标签(行内元素)：<span style="color: orange">&lt;a&gt;&lt;/a&gt;</span></h4>
+    <h4>属性（跳转到外部网页）：target: _blank 跳转到新页签，_self 当前页签中跳转</h4>
+    <div class="chy-container">
+        <a href="https://www.dlut.edu.cn/" target="_blank">大连理工大学:_blank</a>
+        <a href="https://www.dlut.edu.cn/" target="_self" class="chy-a">大连理工大学:_self</a>
+    </div>
+    <a href="https://www.baidu.com" style="text-decoration: none; color: yellow; font-weight: 900">
+        <div style="width: 200px; height: 200px; background-color: orange; margin: 10px auto; text-align: center; line-height: 200px;">点我跳转到百度</div>
+    </a>
+
+    <hr>
+
+    <h4>属性（跳转到内部网页）：指定 html 文件</h4>
+    <div class="chy-container">
+        <a href="./04_图片标签.html" class="chy-a">点我跳转到内部页面</a>
+    </div>
+
+    <hr>
+
+    <h4>超链接可以下载文件</h4>
+    <div style="text-align: center; margin: 5px auto">
+        <a href="../files/Sunnnnny.zip" style="text-decoration: none; color: black">点我下载文件</a>
+    </div>
+
+    <hr>
+    <div style="text-align: center">
+        <a href="javascript:alert('Sunnnnny');">点我弹窗</a>
+    </div>
+</body>
+</html>
