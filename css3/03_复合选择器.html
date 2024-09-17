@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复合选择器(交集选择器、并集选择器)</title>
+    <style>
+        .rich {
+            color: gold;
+        }
+
+        .beauty {
+            color: red;
+        }
+
+        /* 交集选择器[标签 + 类]：表示选中 p 标签 且 类名为 beauty */
+        p.beauty {
+            color: green;
+        }
+
+        /* 交集选择器[类 + 类]：表示选中 类名为 rich 且 类名为 beauty */
+        .beauty.rich {
+            color: blue;
+        }
+
+        /* 并集选择器[标签 + 标签]：表示 h3 和 h4 元素的样式相同 */
+        h3, h4 {
+            color: chocolate;
+            text-align: right;
+            background-color: green;
+        }
+
+        /* 并集选择器[类 + id + 标签]：表示h3和h4元素的样式相同 */
+        .right1,
+        #right2,
+        h6 {
+            color: yellow;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="rich">土豪张三</h2>
+    <h2 class="beauty">明星李四</h2>
+    <h2 class="beauty rich">战士赵六</h2>
+
+    <hr>
+
+    <p class="beauty">小狗旺财</p>
+    <p class="beauty">小猪佩奇</p>
+
+    <h3 class="right1">今天还好么？？</h3>
+    <h4 id="right2">你吃饭了么？？</h4>
+    <h6>你今天睡的好么？</h6>
+</body>
+</html>
