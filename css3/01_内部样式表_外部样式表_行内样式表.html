@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内部样式表、外部样式表、行内样式表</title>
+    <!-- 外部样式表 -->
+    <link rel="stylesheet" href="./css/position.css">
+    <!-- 内部样式表 -->
+    <style>
+        h1 {
+            color: orange;
+            background-color: green;
+            font-size: 30px;
+            text-align: center;
+            cursor: pointer;
+            &:hover {
+                background-color: saddlebrown;
+                color: green;
+            }
+        }
+
+        h2 {
+            text-align: center;
+        }
+        
+        p {
+            text-align: center;
+            color: chocolate;
+            background-color: yellow;
+            font-size: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sunnnnny</h1>
+    <p>大连理工大学</p>
+    <!-- 行内样式表 -->
+    <h2 style="color: red; background-color: mediumpurple; font-size: 35px; text-align: center;">chystart</h2>
+
+    <!-- 使用外部样式表中的样式 -->
+    <h3>Sunnnnny</h3>
+
+    <h2>各个样式表之间的优先级</h2>
+    <h2 style="font-size: 16px">行内样式表 > 内部样式表 = 外部样式表(内部 和 外部和 编写 的位置有关系)</h2>
+    <h2 style="font-size: 16px">同一个样式表中 相同的选择内容样式 后面会覆盖前面的</h2>
+</body>
+</html>
