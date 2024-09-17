@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单控件</title>
+    <style>
+        h4 {
+            text-align: center;
+        }
+
+        ul {
+            li {
+                margin-bottom: 4px;
+            }
+        }
+
+        label {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h4>表单的基本控件</h4>
+    <ul>
+        <li>
+            <span>label标签：点击范围的扩大</span>
+            <ul>
+                <li>&lt;label for="female"&gt;Xxx&lt;/lable&gt;</li>
+            </ul>
+        </li>
+        <li>
+            <span>文本输入框：&lt;input type="text" /&gt;</span>
+            <ul>
+                <li>name 属性：指定控件名称， 提交的 key</li>
+                <li>value 属性：指定默认值</li>
+                <li>maxlength 属性：指定可输入的文本最大长度</li>
+                <li>disabled 属性：禁用表单控件</li>
+            </ul>
+        </li>
+        <li>
+            <span>密码输入框：&lt;input type="password" /&gt;</span>
+            <ul>
+                <li>name 属性：指定控件名称， 提交的 key</li>
+                <li>maxlength 属性：指定可输入的文本最大长度</li>
+            </ul>
+        </li>
+        <li>
+            <span>隐藏输入框：&lt;input type="hidden" /&gt;</span>
+            <ul>
+                <li>name 属性*：指定控件名称，提交的 key</li>
+                <li>value 属性*：选定的值， 提交的 value</li>
+            </ul>
+        </li>
+        <li>
+            <span>单选框：&lt;input type="radio" /&gt;</span>
+            <ul>
+                <li>name 属性*：指定控件名称，必须相同才能只选择一个</li>
+                <li>value 属性*：选定的值</li>
+                <li>checked 属性：默认选中</li>
+            </ul>
+        </li>
+        <li>
+            <span>多选框：&lt;input type="checkbox" /&gt;</span>
+            <ul>
+                <li>name 属性*：指定控件名称</li>
+                <li>value 属性*：选定的值</li>
+                <li>checked 属性：默认选中</li>
+            </ul>
+        </li>
+        <li>
+            <span>文本域：&lt;textarea name="Xxx" cols="Xxx" rows="Xxx"&gt;&lt;/textarea &gt;</span>
+            <ul>
+                <li>rows：行</li>
+                <li>cols：列</li>
+            </ul>
+        </li>
+        <li>
+            <span>下拉框：&lt;select name="Xxx"&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Xxx"&gt; &lt;/option &gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Xxx"&gt; &lt;/option &gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select &gt;
+            </span>
+            <ul>
+                <li>name：属性，表示传递到后端的key的名称</li>
+                <li>value：属性，表示每个选项对应的值</li>
+                <li>selected：属性，表示下拉框初始展示的值</li>
+            </ul>
+        </li>
+        <li>
+            <span>按钮：&lt;button&gt;&lt;/button &gt;</span>
+            <span>或 &lt;input type="submit" /&gt;</span>
+            <ul>
+                <li>提交按钮：&lt;button type = "submit"&gt; &lt;/button&gt;</li>
+                <li>重置按钮：&lt;button type = "reset"&gt; &lt;/button&gt;</li>
+                <li>普通按钮：&lt;button type = "button"&gt; &lt;/button&gt;</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr>
+
+    <h4>表单</h4>
+    <form action="">
+        <label for="account">账户：</label>
+            <input type="text" name="account" value="Sunnnnny" maxlength="10" id="account" disabled> <br/>
+        <label for="pwd">密码：</label>
+            <input type="password" name="password" id="pwd"> <br/>
+        性别：
+            <input type="radio" id="man" name="gender" checked> <label for="man">男</label>
+            <input type="radio" name="gender" id="female"> <label for="female">女</label>  <br/>
+        爱好：
+            <input type="checkbox" name="hobby" value="smoke" checked>抽烟
+            <input type="checkbox" name="hobby" value="drink"> 喝酒
+            <input type="checkbox" name="hobby" value="perm"> 烫头 <br/>
+        <!--隐藏输入框：-->
+            <input type="hidden" name="Sunnnnny" value="chystart">
+        其他：
+            <textarea name="other" cols="30" rows="5" ></textarea> <br>
+        籍贯:  <select name="place">
+                <option value="广东省">广东省</option>
+                <option value="黑龙江省" selected>黑龙江省</option>
+                <option value="辽宁省">辽宁省</option>
+                <option value="吉林省">吉林省</option>
+               </select> <br /> <br />
+        <button type="submit">确认</button> <button type="reset">重置</button> <button>检测账户是否被注册</button>
+    </form>
+</body>
+</html>
