@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签</title>
+    <style>
+        ul {
+            li {
+                list-style: none;
+            }
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        table {
+            margin: 0 auto;
+            border: 1px solid black;
+            width: 500px;
+            height: 180px;
+            border-collapse: collapse; /* 消除单元格之间的空隙 */
+            th, td {
+                border: 1px solid black;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h4>表格的基本标签：</h4>
+    <ul style="text-align: center">
+        <li>表格整体：&lt;table&gt;</li>
+        <li>表格标题：&lt;caption&gt;</li>
+        <li>表格头部：&lt;thead&gt;</li>
+        <li>表格主体：&lt;tbody&gt;</li>
+        <li>表格脚注：&lt;tfoot&gt;</li>
+    </ul>
+    <hr>
+
+    <table>
+        <caption style="color: orange; font-weight: 900; margin-bottom: 5px; font-size: 25px">学生信息</caption>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>民族</th>
+                <th>政治面貌</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>张三</td>
+                <td>男</td>
+                <td>18</td>
+                <td>汉族</td>
+                <td>团员</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>女</td>
+                <td>20</td>
+                <td>满族</td>
+                <td>群众</td>
+            </tr>
+            <tr>
+                <td>王五</td>
+                <td>男</td>
+                <td>19</td>
+                <td>回族</td>
+                <td>党员</td>
+            </tr>
+            <tr>
+                <td>赵六</td>
+                <td>女</td>
+                <td>21</td>
+                <td>壮族</td>
+                <td>团员</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>共计：4人</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+    <h4>表格的<span style="color: red">跨行：rowspan</span> 和 <span style="color: red">跨列：colspan</span></h4>
+    <table>
+        <caption style="font-size: 20px">课程表</caption>
+        <thead>
+            <tr>
+                <th>项目</th>
+                <th colspan="5">上课</th>
+                <th colspan="2">活动与休息</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>星期</td>
+                <td>星期一</td>
+                <td>星期二</td>
+                <td>星期三</td>
+                <td>星期四</td>
+                <td>星期五</td>
+                <td>星期六</td>
+                <td>星期日</td>
+            </tr>
+            <tr>
+                <td rowspan="4">上午</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>英语</td>
+                <td>物理</td>
+                <td>数学竞赛</td>
+                <td rowspan="4">休息</td>
+            </tr>
+            <tr>
+                <td>数学</td>
+                <td>语文</td>
+                <td>化学</td>
+                <td>物理</td>
+                <td>英语</td>
+                <td>篮球比赛</td>
+            </tr>
+            <tr>
+                <td>化学</td>
+                <td>语文</td>
+                <td>体育</td>
+                <td>历史</td>
+                <td>地理</td>
+                <td>每周一考</td>
+            </tr>
+            <tr>
+                <td>体育</td>
+                <td>化学</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>社会实践</td>
+            </tr>
+            <tr>
+                <td rowspan="2">下午</td>
+                <td>语文</td>
+                <td>英语</td>
+                <td>数学</td>
+                <td>物理</td>
+                <td>数学</td>
+                <td>英语角</td>
+                <td rowspan="2">休息</td>
+            </tr>
+            <tr>
+                <td>化学</td>
+                <td>物理</td>
+                <td>地理</td>
+                <td>生物</td>
+                <td>体育</td>
+                <td>自由活动</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

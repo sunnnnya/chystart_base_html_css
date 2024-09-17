@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无序列表_有序列表_自定义列表</title>
+    <style lang="scss">
+        ol {
+            li {
+                &:first-child {
+                    background-color: green;
+                    color: orange;
+                }
+                &:nth-child(2) {
+                    background-color: red;
+                    color: purple;
+                }
+            }
+        }
+
+        ul {
+            li {
+                &:nth-of-type(3) {
+                    color: brown;
+                    background-color: yellow;
+                    font-size: 20px;
+                    font-weight: 900;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <h4>要把大象放进冰箱一共分几步？（有序列表）</h4>
+    <ol>
+        <li>打开冰箱门</li>
+        <li>把大象放进冰箱</li>
+        <li>关闭冰箱门</li>
+    </ol>
+
+    <h4>我想去的几个城市（无序列表）</h4>
+    <ul>
+        <li>成都</li>
+        <li>上海</li>
+        <li>
+            <span>武汉景点排名</span>
+            <ol>
+                <li>黄鹤楼</li>
+                <li>武汉大学</li>
+                <li>东湖</li>
+                <li>户部巷</li>
+                <li>楚河汉街</li>
+                <li>武昌起义纪念馆</li>
+            </ol>
+        </li>
+        <li>黑龙江</li>
+    </ul>
+
+    <h4>如何更好的学习？（自定义列表）</h4>
+    <dl>
+        <dt>做好笔记</dt>
+        <dd>笔记是一个很重要的东西</dd>
+        <dd>多练习一些</dd>
+        <dd>错误是很正常的</dd>
+        <dt>写好代码</dt>
+        <dd>多动手敲代码</dd>
+        <dd>多看 Bolg</dd>
+    </dl>
+
+    <h3 style="text-align: center"><span style="color: red">注意点:</span></h3>
+    <ol style="text-align: center; font-weight: 900;">
+        <li>ol 标签中尽量只出现 li 标签，其余的标签写到 li 中</li>
+        <li>li 标签不要单独使用</li>
+        <li style="color: red; background-color: orange">列表 支持嵌套</li>
+    </ol>
+</body>
+</html>
