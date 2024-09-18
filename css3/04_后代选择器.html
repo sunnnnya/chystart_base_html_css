@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后代选择器</title>
+    <style>
+        /* 后代选择器：儿子孙子都可以选择 */
+        ul li {
+            color: red;
+            background-color: orange;
+            text-align: center;
+            list-style: none;
+            font-size: 20px;
+        }
+        ul li a {
+            color: green;
+            text-decoration: none;
+        }
+        .sunnnnny li {
+            color: orange;
+            font-weight: 900;
+            font-size: 20px;
+            background-color: green;
+        }
+
+        .subject div.front-end {
+            color: deeppink;
+            height: 40px;
+            background-color: greenyellow;
+            font-size: 20px;
+            line-height: 40px;
+        }
+        .subject li {
+            background-color: mediumpurple;
+            color: skyblue;
+            font-size: 20px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>抽烟</li>
+        <li>喝酒</li>
+        <li>
+            <a href="#">烫头</a>
+        </li>
+    </ul>
+
+    <hr>
+
+    <ol class="sunnnnny">
+        <li>张三</li>
+        <li>李四</li>
+        <li>王五</li>
+    </ol>
+
+    <ol class="subject">
+        <li class="front-end">后端</li>
+        <div class="front-end">一定好好学习后端，多多掌握技术栈！！</div>
+        <li>Java</li>
+        <li>Vue3</li>
+        <li>TypeScript</li>
+    </ol>
+</body>
+</html>
