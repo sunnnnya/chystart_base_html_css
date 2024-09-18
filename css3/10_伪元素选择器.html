@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素选择器</title>
+    <style>
+        /* 选择 div 标签中的 第一个文字 */
+        div::first-letter {
+            color: orange;
+            font-style: italic;
+            font-size: 20px;
+        }
+        /* 选择 div 标签中的 第一行文字 */
+        div::first-line {
+            color: green;
+            font-size: 20px;
+        }
+        /* 选中的是 div 中被鼠标选中的文字 */
+        div::selection {
+            color: orange;
+            background-color: green;
+        }
+        /* 选中的是input元素中的提示文字 */
+        input::placeholder {
+            color: hotpink;
+        }
+        /* p 标签内容之前的元素 */
+        p::before {
+            content: '$';
+            color: red;
+        }
+        /* p 标签内容之后的元素 */
+        p:after {
+            content: '.00';
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+    <input type="text" placeholder="请输入您的账号...">
+    <p><del>199</del></p>
+    <p>299</p>
+    <p><del>399</del></p>
+    <p>499</p>
+</body>
+</html>
