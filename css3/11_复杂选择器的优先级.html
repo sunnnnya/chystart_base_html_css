@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复杂选择器的优先级</title>
+    <style>
+        .container span.sunnnnny {
+            color: red;
+        }
+        div>p>span:nth-child(1) {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>
+            <span class="sunnnnny">大连理工大学</span>
+            <span>好好学习，天天向上！</span>
+        </p>
+    </div>
+</body>
+</html>
