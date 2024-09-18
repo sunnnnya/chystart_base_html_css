@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结构伪类选择器2</title>
+    <style>
+        h4 {
+            font-size: 16px;
+            text-align: center;
+        }
+        div p {
+            text-align: center;
+            background-color: orangered;
+            font-size: 20px;
+            font-weight: 900;
+        }
+        /* 所有孩子都考虑：找奇数的 */
+        .chystart>p:nth-child(odd) {
+            color: green;
+        }
+        /* 所有孩子都考虑：找偶数的 */
+        .Sunnnny>p:nth-child(even) {
+            color: yellow;
+        }
+        /* 所有孩子都考虑：找前五个的 */
+        .hello>p:nth-child(-n + 5) {
+            color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <h4>.chystart>p:nth-child(odd)：找到 chystart类选择器 的孩子 p标签 中的 <span style="color: red">奇数</span>位置的元素</h4>
+    <div class="chystart">
+        <p>第一个</p>
+        <p>第二个</p>
+        <p>第三个</p>
+        <p>第四个</p>
+        <p>第五个</p>
+        <p>第六个</p>
+        <p>第七个</p>
+        <p>第八个</p>
+        <p>第九个</p>
+    </div>
+
+    <h4>.Sunnnny>p:nth-child(even)：找到 Sunnnny类选择器 的子p标签 中的 <span style="color: red">偶数</span> 位置的元素</h4>
+    <div class="Sunnnny">
+        <p>第一个</p>
+        <p>第二个</p>
+        <p>第三个</p>
+        <p>第四个</p>
+        <p>第五个</p>
+        <p>第六个</p>
+        <p>第七个</p>
+        <p>第八个</p>
+        <p>第九个</p>
+    </div>
+
+    <h4>.hello>p:nth-child(5 - n)：找到 hello类选择器 的子p标签 中的 <span style="color: red">前五个位置</span> 的元素</h4>
+    <div class="hello">
+        <p>第一个</p>
+        <p>第二个</p>
+        <p>第三个</p>
+        <p>第四个</p>
+        <p>第五个</p>
+        <p>第六个</p>
+        <p>第七个</p>
+        <p>第八个</p>
+        <p>第九个</p>
+    </div>
+</body>
+</html>

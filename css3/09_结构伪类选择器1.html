@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结构伪类选择器1</title>
+    <style>
+        h4 {
+            font-size: 16px;
+        }
+        /* 子选择器 */
+        div>p {
+            background-color: orange;
+            font-size: 25px;
+            text-align: center;
+        }
+        /* 所有孩子都考虑，找第三个孩子 */
+        div>p:nth-child(3) {
+            color: hotpink; /* 李四：90分 变成粉红色 */
+        }
+        /* 只找 div 孩子中，第三个 p 孩子 */
+        div>p:nth-of-type(3) {
+            color: green; /* 样式成功 */
+        }
+        /* 所有孩子都考虑，找最后一个孩子 */
+        div>p:last-child {
+            color: red;
+        }
+        /* 只找 div 孩子中，最后一个 p 孩子 */
+        div>p:last-of-type {
+            color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>Sunnnnny</span>
+        <p>张三：100分</p>
+        <p>李四：90分</p>
+        <p>王五：70分</p>
+        <p style="color: yellow;">葛琦：75分</p>
+        <p>赵六：60分</p>
+    </div>
+</body>
+</html>
