@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style>
+        /* 属性选择器：选择具有 title 属性的标签 */
+        [title] {
+            color: orange;
+            background-color: green;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 900;
+        }
+        /* 属性选择器：选择具有 title 属性且 属性值 为 show 的标签 */
+        [title="hello"] {
+            color: purple;
+            background-color: orangered;
+        }
+        /* 属性选择器：选择具有 title 属性 且 属性值以 s 开头的标签 */
+        [title^="s"] {
+            color: green;
+            background-color: deepskyblue;
+        }
+        /* 属性选择器：具有 title 属性 且 属性值以 o 结尾的标签 */
+        [title$="o"] {
+            color: hotpink;
+            background-color: purple;
+        }
+        /* 属性选择器：具有 title 属性 且 属性值包含 w 的标签 */
+        [title*="w"] {
+            color: yellowgreen;
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <div title="chystart">Sunnnnny1</div>
+    <div title="showInfo">Sunnnnny2</div>
+    <div title="show">Sunnnnny3</div>
+    <div title="hello">Sunnnnny4</div>
+</body>
+</html>

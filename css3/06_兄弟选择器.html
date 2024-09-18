@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>兄弟选择器</title>
+    <style>
+        /* 表示选中div仅仅相邻的兄弟p元素(向下找) */
+        div+p {
+            color: orange;
+            background-color: green;
+            font-size: 20px;
+            text-align: center;
+            font-weight: 900;
+        }
+        /* 修改没有效果，因为和h3紧紧相邻且在下面的是h4 */
+        h3+p {
+            color: green;
+            background-color: orange;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 900;
+        }
+        /* 表示的是div的 所有 兄弟p标签（向下看） */
+        /*div~p {
+            color: green;
+            background-color: orange;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }*/
+    </style>
+</head>
+<body>
+    <div>Sunnnnny</div>
+    <h3>chystart</h3>
+    <p>前端</p>
+    <p>后端</p>
+    <p>运维</p>
+    <p>测试</p>
+    <h4>大连理工大学</h4>
+    <div>DLUTER</div>
+    <p>dluter</p>
+</body>
+</html>
