@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS的三大特性</title>
+    <style>
+        h2 {
+            color: red;
+        }
+        /* 1: 层叠性：解决样式冲突问题 */
+        h2 {
+            color: green;
+        }
+        /* 2: 继承性（优先继承离得近的）：子元素会继承父元素的某些属性 */
+        div {
+            color: orange;
+            font-size: 30px;
+        }
+        /* 继承离的最近的元素 */
+        p {
+            color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <h2>Sunnnnny</h2>
+
+    <hr>
+
+    <div>
+        我是div中的文字
+        <span>我是span中的文字1</span>
+        <span>我是span中的文字2</span>
+        <span>我是span中的文字3</span>
+        <p>
+            <span>我是span中的文字4</span>
+        </p>
+    </div>
+</body>
+</html>
