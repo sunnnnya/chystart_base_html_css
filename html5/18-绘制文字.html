@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="600" height="600"></canvas>
+    <script>
+        var cas = document.querySelector('canvas');
+        var ctx = cas.getContext('2d');
+        var str = '中华人民共和国万岁';
+        ctx.font = "40px bolder 黑体";
+        ctx.fillStyle = "red";
+        ctx.textAlign = 'center'; //可选值  center  left  right
+        ctx.fillText(str, 300, 100);
+    </script>
+</body>
+
+</html>

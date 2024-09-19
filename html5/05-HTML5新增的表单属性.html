@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增的表单属性</title>
+    <style>
+        /* ::表示伪元素的意思 */
+        input::placeholder {
+            color: pink;
+        }
+        .green::placeholder {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="./后端处理数据的接口">
+        <!-- input是单标签  img  br hr -->
+        <!-- required       属性表示，该表单的信息一定要填写，不能为空   -->
+        <!-- placeholder    文本框中的默认的文本 -->
+        <!-- autofocus      自动聚焦属性，自动聚焦到表单 -->
+        <!-- autocomplete   的属性默认的值是on，但是我们需要修改为off这样才不会下次填写的时候出现信息提示的问题 -->
+
+        <input type="search" name="sear" id="" required="required" placeholder="丛虹羽" autofocus="autofocus" autocomplete="off">
+
+        <!-- 只有input：file才可以使用multiple="multiple" 来实现多文件的上传-->
+        <input type="file" name="" id="" multiple="multiple">
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+        <hr/>
+        <form action="./hello,world">
+            <input type="text" name="username" id="username" placeholder="请输入姓名" class="green"/>
+        </form>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMl5新增的视频（video）标签</title>
+    <!-- 内部样式表 -->
+    <style>
+        video {
+            width: 500px;
+            /* 这里面的视频标签是行内块元素  是不能使用margin标签的 */
+            /* margin: 0 auto; */
+        }
+        
+        body {
+            /* 父元素使用tac父元素里面的行内的子元素就会水平居中 */
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 里面存了在media/mi.mp4，大多数浏览器都支持MP4的视频格式 -->
+
+    <!-- autoplay 自动播放 -->
+    <!-- muted 因为谷歌浏览器把自动播放禁止了，所以要增加muted属性 -->
+    <!-- loop 循换播放 -->
+    <!-- controls 控制播放的组件 -->
+    <!-- poster 表示视频没有手动或者自动加载的时候，会展示出来的图片 -->
+    <!-- 这里面也可以使用同一级别路径什么的../ 等 -->
+    <video src="media/mi.mp4" autoplay="autoplay" muted="muted" loop="loop" controls="controls" poster="images/1.jpg"></video>
+</body>
+
+</html>

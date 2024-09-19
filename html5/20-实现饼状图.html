@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="600" height="600"></canvas>
+
+    <script>
+        var cas = document.querySelector("canvas");
+        var ctx = cas.getContext('2d');
+        var colors = ["red", "green", "blue"];
+        var x = 200,
+            y = 200,
+            r = 100,
+            start = -Math.PI / 2,
+            step = Math.PI * 2 / 3;
+
+        for (var i = 0; i < 3; i++) {
+            ctx.beginPath(); //很重要相当于把之前的草稿给清除掉了
+            ctx.moveTo(x, y);
+            ctx.fillStyle = colors[i];
+            ctx.arc(x, y, r, start, start += step);
+            ctx.fill();
+        }
+    </script>
+</body>
+
+</html>

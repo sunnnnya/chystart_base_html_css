@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            /* border: 1px solid red; */
+            background-color: orange;
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="160" height="50"></canvas>
+    <!-- <div></div> -->
+    <script>
+        yanzhengma("canvas"); //先是显示一张默认的验证码
+        document.querySelector("canvas").addEventListener('click', function() {
+            yanzhengma("canvas");
+        });
+
+        function yanzhengma(selector) {
+            // 获取canvas的DOM对象
+            var cas = document.querySelector(selector);
+            // 获取上下文对象
+            var ctx = cas.getContext('2d');
+            var code = getRandom(5);
+
+            ctx.fillStyle = "orange";
+            //这里面是每一次点击就生成一个矩形再进行赋值，就不需要把原来的画布中的文字的内容给删除
+
+            ctx.fillRect(0, 0, 160, 50);
+
+            ctx.font = "bolder 20px 黑体";
+            //设置字体的颜色
+            ctx.fillStyle = "green";
+            ctx.fillText(code, 20, 30);
+        }
+        //返回指定范围内的随机整数
+        function getRandom(count) {
+            var str = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            var newstr = '';
+            for (var i = 0; i < count; i++) {
+                var index = random(0, str.length - 1);
+                newstr += str.charAt(index) + ' '; //加空格的原因是因为防止出现字母之间空隙太小的问题
+            }
+            return newstr;
+        }
+
+        function random(min, max) {
+            //返回范围内的随机整数
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script>
+</body>
+
+</html>

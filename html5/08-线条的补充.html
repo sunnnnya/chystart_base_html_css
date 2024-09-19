@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 修改画布的尺寸  使用属性的方法  css中只会放大像素点的尺寸但是并不会增加像素点的个数  -->
+    <canvas width="600" height="400"></canvas>
+    
+    <script>
+        //获取canvas的dom对象
+        var can = document.querySelector("canvas");
+
+        //获取上下文对象
+        var ctx = can.getContext('2d');
+
+        //指定画笔的坐标  起点
+        ctx.moveTo(100, 100);
+
+        //指定终点的坐标
+        ctx.lineTo(300, 100);
+        ctx.lineTo(300, 300);
+
+        //指定两条线交点的样式  round圆角  bevel 被砍掉了一部分
+        // ctx.lineJoin = 'round';
+
+        //指定线条末端的类型  square 直角  round 圆角
+        ctx.lineCap = "round";
+
+        //指定线条的颜色  先指定颜色  然后再进行描边
+        ctx.strokeStyle = "green";
+
+        //指定线条的宽度  不能带单位
+        ctx.lineWidth = 10;
+
+        //描边的方式画线  可以通过设置坐标实现斜线
+        ctx.stroke();
+    </script>
+</body>
+
+</html>

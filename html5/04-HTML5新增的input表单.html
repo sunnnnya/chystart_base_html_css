@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5新增的表单</title>
+    <style>
+        /* 通配符选择器 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 后代选择 */
+        ul li {
+            /* 去掉li的小圆点 */
+            list-style: none;
+        }
+        /* 类选择器 */
+        .moma {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  我们验证的时候必须添加form表单域   其中的post表示的是隐藏输入的数据 get的提交方式并不会隐藏填入表单的信息，采用拼接字符串的方式，拼接在URL地址的后面  -->
+    <form action="XXXxxx.php" method="post">
+        <!-- 无序列表 -->
+        <ul>
+            <li>邮箱：<input type="email"></li>
+            <li>网址：<input type="url"></li>
+            <li>日期：<input type="date"></li>
+            <li>时间：<input type="time"></li>
+            <!-- <li>月份：<input type="month"></li> -->
+            <!-- <li>周：<input type="week"></li> -->
+            <li>数量：<input type="number"></li>
+            <li>手机号码：<input type="tel"></li>
+            <li>搜索：<input type="search"></li>
+            <li>颜色：<input type="color"></li>
+
+            <!-- 当我们点击提交按钮就可以验证表单了 -->
+            <li><input type="submit" value="提交" class="moma"></li>
+            <!-- 一定要注意重置的放置的位置  除了有效的区域就会变的不好用 -->
+            <input type="reset" value="重置">
+        </ul>
+    </form>
+    <hr/>
+    <!-- 有序列表 -->
+    <ol>
+        <li>Hello</li>
+        <li>World</li>
+        <li>Hello,World</li>
+    </ol>
+
+</body>
+
+</html>
