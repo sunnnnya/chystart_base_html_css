@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* 使用了之后就会出现视觉差，近大远小的感觉 */
+            perspective: 500px;
+        }
+        
+        img {
+            display: block;
+            /* 只有块级元素才可以使用margin属性  行内块也是不行的 */
+            margin: 100px auto;
+            transition: all 2s;
+        }
+        /* 权重0,0,1,1  标签选择器0,0,0,1 伪类选择器 0,0,1,0*/
+        
+        img:hover {
+            /* 旋转的方向的判断应用左手法则   拇指的方向是轴的方向  然后四指的方向是旋转的方向*/
+            /* 其中的角度正值，负值都可以 */
+
+            /* 绕着x轴进行旋转 */
+            /* transform: rotateX(180deg); */
+
+            /* 绕着y轴旋转 */
+            /* transform: rotateY(180deg); */
+            /* transform: rotateY(-45deg); */
+
+            /* 绕着z轴进行旋转 */
+            /* transform: rotateZ(180deg); */
+            
+            /* 下面的表示的是绕着x轴进行旋转 */
+            transform: rotate3d(1, 0, 0, 45deg);
+
+            /* 其中还可以自定义轴进行旋转(了解就行,我们不常用)*/
+            /* transform: rotate3d(1, 1, 0, 45deg); */
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/zhou.jpg" alt="">
+</body>
+
+</html>

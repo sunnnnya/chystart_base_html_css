@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D转换之旋转</title>
+    <style>
+        img {
+            /* 顺时针旋转45度 */
+            /* transform: rotate(45deg); */
+            width: 200px;
+            /* 过渡写到本身上，谁做过渡给谁加 */
+            transition: all 2s;
+            /* transition 属性的 顺序是 选择的元素 过渡时间 运动的曲线 还有延迟时间; */
+        }
+        
+        img:hover {
+            transform: rotate(240deg);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/zhou.jpg" alt="">
+</body>
+
+</html>

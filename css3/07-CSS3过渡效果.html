@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3过渡效果</title>
+    <style>
+        .father {
+            width: 200px;
+            height: 200px;
+            background-color: transparent;
+        }
+
+        .son {
+            float: left;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            transition: all 0.3s;
+        }
+        
+        .father:hover .son {
+            width: 400px;
+            height: 400px;
+            background-color: green;
+        }
+        .son1 {
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transition: all 0.2s;
+        }
+        .son1:hover {
+            width: 400px;
+            height: 400px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <hr />
+    <div class="son1"></div>
+    
+</body>
+</html>

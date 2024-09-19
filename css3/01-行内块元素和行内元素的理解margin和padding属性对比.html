@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .class1 {
+            /* margin属性对于行内元素来说只有左右是好使的 */
+            background-color: red;
+            /* 不好使 */
+            /* margin-top: 10px; */
+            /* 好使 */
+            /* margin-left: 10px; */
+            /* 不好使 */
+            /* margin-bottom: 10px; */
+            /* 好使 */
+            /* margin-right: 10px; */
+        }
+        
+        .class2 {
+            /* padding属性对于行内元素只有左右下是有效的 */
+            background-color: green;
+            /* 不好使 */
+            /* padding-top: 10px; */
+            /* 好使 */
+            /* padding-right: 10px; */
+            /* 好使 */
+            /* padding-left: 10px; */
+            /* 好使 */
+            /* padding-bottom: 10px; */
+        }
+        
+        .class3 {
+            background-color: orange;
+        }
+        
+        img {
+            /* 行内块元素  width height margin 有数值的都是有效的 */
+            /* margin: 10px 300px 30px 20px; */
+            /* margin: 200px 500px; */
+            /* margin只能是块级元素可以使用 */
+            /* 但是margin: 0 auto; 是不好用的 */
+            /* 行内块元素和文字的垂直居中对齐方式：vertical-align: middle */
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="class1">丛虹羽1</span>
+    <span class="class2">丛虹羽2</span>
+    <span class="class3">丛虹羽3</span>
+    <div>你好啊</div>
+    <!-- img行内块元素 -->
+    <img src="images/zhou.jpg" alt="">
+    <span>helly</span>
+    <!-- 一条分割线  块级元素 -->
+    <hr>
+
+</body>
+
+</html>

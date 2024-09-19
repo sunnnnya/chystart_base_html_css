@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D导航栏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            margin: 100px;
+        }
+        
+        ul li {
+            margin: 0 15px;
+            float: left;
+            width: 120px;
+            height: 36px;
+            list-style: none;
+            /* 一会我们需要给box旋转  也需要透视 干脆直接给li加  里面的子盒子都有透视效果 */
+            perspective: 500px;
+        }
+        
+        .box {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            /* 一旦子盒子有3d的效果  父盒子一定要保留3d效果 */
+            transform-style: preserve-3d;
+            transition: all 0.5s;
+        }
+        
+        .front,
+        .bottom {
+            position: absolute;
+            /* 宽度和高度都是box的100% */
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            text-align: center;
+            line-height: 36px;
+            font-size: 17px;
+            color: #fff;
+        }
+        
+        .front {
+            background-color: pink;
+            /* 设置底层的背景权值设置为1 */
+            z-index: 1;
+            /* 按照z轴进行向前移动，所以是正值 */
+            transform: translateZ(18px);
+        }
+        
+        .bottom {
+            background-color: purple;
+            /* 这个x轴一定是负值  并且首先是一定要首先是位移然后一定是旋转 */
+            transform: translateY(18px) rotateX(-90deg);
+            /* 并且需要注意的是transform一定不能分开写，这样会出现重叠覆盖的问题 */
+        }
+        
+        .box:hover {
+            transform: rotateX(90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="front">丛虹羽</div>
+                <div class="bottom">要好好学习</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">丛虹羽</div>
+                <div class="bottom">要好好学习</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">丛虹羽</div>
+                <div class="bottom">要好好学习</div>
+            </div>
+        </li>
+
+    </ul>
+</body>
+
+</html>

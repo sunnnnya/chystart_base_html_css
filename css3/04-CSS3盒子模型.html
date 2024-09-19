@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 20px solid red;
+            padding: 15px;
+            /* 有了padding和border之后才200 * 200 */
+            box-sizing: border-box;
+        }
+        
+        .warror {
+            background-color: skyblue;
+            /* 加了padding和border之后会变大，只有文本才是200 * 200 */
+            /* 最终的盒子的大小是270 * 270 */
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        小猪佩奇
+    </div>
+    <div class="warror">
+        恺甲勇士
+    </div>
+</body>
+
+</html>

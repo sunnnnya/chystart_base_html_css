@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>侧轴对齐方式_一行</title>
+    <style>
+        div {
+            /* C3的盒子模型 */
+            box-sizing: border-box;
+        }
+        .outer {
+            width: 1000px;
+            height: 600px;
+            background-color: #888;
+            margin: 0 auto;
+            /* 伸缩盒模型相关属性-start */
+
+            /* 开启了flex布局 */
+            display: flex;
+
+            /* 调整主轴的方向： 从左到右 默认值 */
+            flex-direction: row;
+
+            /* 主轴的换行方式：默认的是nowrap不换行，挤在一起*/
+            flex-wrap: wrap;
+
+            /* 主轴的对齐方式：主轴的起始位置 */
+            justify-content: flex-start;
+
+            /* 侧轴的对齐方式：侧轴的起始位置对齐 */
+            /* align-items: flex-start; */
+
+            /* 侧轴的对齐方式：侧轴的终止位置对齐 */
+            /* align-items: flex-end; */
+
+            /* 侧轴的对齐方式：侧轴的中间位置对齐 */
+            /* align-items: center; */
+
+            /* 侧轴对齐的默认值： stretch，拉伸到整个父容器，但是前提是不能给指定高度*/
+            align-items: stretch;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            border: 1px solid black;
+            /* 水平居中 */
+            /* text-align: center; */
+            /* 行高属性会被继承所以出现了有高度的情况 */
+            /* line-height: 200px; */
+            /* 浮动可以实现左对齐，但是会出现脱标的情况 */
+            /* float: left; */
+        }
+        .inner2 {
+            height: 300px;
+        }
+        .inner3 {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- outer被称为伸缩容器 -->
+    <div class="outer">
+        <!-- 其中outer中的子元素才被称为伸缩项目、孙子元素、重孙子元素不是伸缩项目 -->
+        <!-- 一但成为了伸缩项目之后，就会块状化 -->
+        <div class="inner">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner inner3">3</div>
+    </div>
+</body>
+
+</html>

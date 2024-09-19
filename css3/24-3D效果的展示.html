@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            perspective: 500px;
+        }
+        .father {
+            transform-style: preserve-3d;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: transparent;
+            margin: 100px auto;
+            transition: all 2s;
+        }
+        .father::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+        .father::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            transform: rotateX(90deg);
+        }
+        .father:hover {
+            transform: rotateY(180deg);
+        }
+        .father1 {
+            transform-style: preserve-3d;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 20px auto;
+            transition: all 1s;
+        }
+        .son1 {
+            /* 浮动后变成了行内块元素，但是脱标了 */
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .son2 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            transform: rotateY(80deg);
+        }
+        .father1:hover {
+            transform: rotateX(60deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+
+    </div>
+    <hr />
+    <div class="father1">
+        <div class="son1"></div>
+        <div class="son2"></div>
+    </div>
+</body>
+</html>

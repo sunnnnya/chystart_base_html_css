@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器之公式</title>
+    <style>
+        /* 1:nth-child(n) 从0开始每次+1 往后计算 这里面必须是n 不能是其他的字母 */
+        /* n一定要注意是从0开始 */
+        
+        /* 样式1：选择出所有的孩子 */
+        /* ol li:nth-child(n) {
+            background-color: green;
+        } */
+
+        /* 样式2：选择出所有的偶数的孩子等价于even */
+        /* ol li:nth-child(2n) {
+            background-color: red;
+        } */
+
+        /* 样式3：选择出所有的奇数的孩子等价于odd */
+        /* ol li:nth-child(2n+1) {
+            background-color: yellow;
+        } */
+        
+        /* 样式4：从第三个孩子开始选择到最后 颜色更改为紫色*/
+        /* ol li:nth-child(n+3) {
+            background-color: purple;
+        } */
+
+        /* 样式5：选择前5个孩子 颜色更改为蓝色*/
+        ol {
+            background-color: green;
+        }
+        
+        ol li:nth-child(-n+5) {
+            background-color: blue;
+        }
+        
+        div h1:first-child {
+            /* 值得注意的是这里面的first-child和last-child是一个意思就是先把div的后代全部标记好了  然后去找第一个孩子看看是不是所指定的标签如果不是就会失效  如果是则修改成功 */
+            color: green;
+        }
+        
+        div p:last-of-type {
+            /* 提前标记好的最后一个标签不是p 则出现了匹配失效的情况 */
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ol>
+
+    <div>
+        <p>我是第一个p标签</p>
+        <h1>我是第一个h1标签</h1>
+        <p>我是第二个p标签</p>
+        <h1>我是第二个h1标签</h1>
+    </div>
+</body>
+
+</html>

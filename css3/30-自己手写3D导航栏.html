@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            perspective: 500px;
+        }
+        .clearfix:before,
+        .clearfix:after {
+            content: '';
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        ul {
+            width: 800px;
+            margin: 100px auto;
+        }
+
+        li {
+            float: left;    
+            list-style: none;
+            width: 90px;
+            height: 36px;
+            margin: 0 10px;
+        }
+
+        .father {
+            transform-style: preserve-3d;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            transition: all 0.4s;
+        }
+        .father:hover {
+            transform: rotateX(90deg);
+        }
+        .father .son1,
+        .father .son2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 36px;
+            color: #000;
+            font-weight: 700;
+        }
+        .father .son1 {
+            background-color: orange;
+            z-index: 1;
+            transform: translateZ(18px) ;
+        }
+        .father .son2 {
+            background-color: green;
+            transform: translateY(18px) rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <ul class="clearfix">
+        <li>
+            <div class="father">
+                <div class="son1">微博导航</div>
+                <div class="son2">真的好看</div>
+            </div>
+        </li>
+        <li>
+            <div class="father">
+                <div class="son1">微博导航</div>
+                <div class="son2">真的好看</div>
+            </div>
+        </li>
+        <li>
+            <div class="father">
+                <div class="son1">微博导航</div>
+                <div class="son2">真的好看</div>
+            </div>
+        </li>
+        <li>
+            <div class="father">
+                <div class="son1">微博导航</div>
+                <div class="son2">真的好看</div>
+            </div>
+        </li>
+        <li>
+            <div class="father">
+                <div class="son1">微博导航</div>
+                <div class="son2">真的好看</div>
+            </div>
+        </li>
+        <li>
+            <div class="father">
+                <div class="son1">微博导航</div>
+                <div class="son2">真的好看</div>
+            </div>
+        </li>
+        <li>
+            <div class="father">
+                <div class="son1">微博导航</div>
+                <div class="son2">真的好看</div>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

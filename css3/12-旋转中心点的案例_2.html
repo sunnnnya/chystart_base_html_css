@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            box-sizing: border-box;
+            margin: 50px auto;
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            overflow: hidden;
+        }
+        /* 伪元素选择器 */
+        div::after {
+            display: block;
+            content: '丛虹羽';
+            width: 400px;
+            height: 400px;
+            background-color: orange;
+            text-align: center;
+            line-height: 400px;
+            color: white;
+            font-weight: bold;
+            transform-origin: left bottom;
+            transform: rotate(90deg);
+            transition: all 0.4s;
+        }
+        div:hover::after {
+            /* 后面给定的度数是确切的值，不是需要转换的角度 */
+            transform: rotate(0deg);
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>

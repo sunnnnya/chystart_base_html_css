@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3新增伪元素选择器</title>
+    <style>
+        div {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        /* div::before权重是0,0,0,2 */
+        div::before {
+            /* 这个content是必须写的 */
+            /* 因为伪元素是行内元素，所以我们想要设置宽度和高度需要转换为行内块元素   最好是使用position: absolute;  也可以直接设定宽度和高度 */
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            content: '我';
+            /* 如果没有display: inline-bloack设置宽度和高度是无效的   因为是行内元素*/
+            width: 30px;
+            height: 40px;
+            background-color: purple;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            font-weight: 700;
+        }
+        
+        div::after {
+            /* 如果不填写内容的话，我们需要使用content: ''; */
+            content: '丛虹羽';
+        }
+    </style>
+</head>
+
+<body>
+    <div>是</div>
+</body>
+
+</html>

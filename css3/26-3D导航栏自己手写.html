@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D导航栏自己手写</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            width: 800px;
+            height: 40px;
+            /* background-color: pink; */
+            margin: 200px auto;
+        }
+        
+        ul li {
+            float: left;
+            width: 140px;
+            height: 40px;
+            list-style: none;
+            /* background-color: red; */
+            margin-left: 10px;
+        }
+        
+        .father {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: all 0.4s;
+            transform-style: preserve-3d;
+        }
+        
+        .father:hover {
+            transform: rotateX(-90deg);
+        }
+        
+        .son1,
+        .son2 {
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            line-height: 40px;
+        }
+        
+        .son1 {
+            background-color: red;
+            transform: translateZ(20px);
+            z-index: 1;
+        }
+        
+        .son2 {
+            background-color: green;
+            transform: translateY(-20px) rotateX(90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <div class="father">
+                <div class="son1">丛虹羽</div>
+                <div class="son2">好好学习</div>
+            </div>
+        </li>
+        <li>
+            <div class="father">
+                <div class="son1">丛虹羽</div>
+                <div class="son2">好好学习</div>
+            </div>
+        </li>
+        <li>
+            <div class="father">
+                <div class="son1">丛虹羽</div>
+                <div class="son2">好好学习</div>
+            </div>
+        </li>
+        <li>
+            <div class="father">
+                <div class="son1">丛虹羽</div>
+                <div class="son2">好好学习</div>
+            </div>
+        </li>
+        <li>
+            <div class="father">
+                <div class="son1">丛虹羽</div>
+                <div class="son2">好好学习</div>
+            </div>
+        </li>
+    </ul>
+</body>
+
+</html>

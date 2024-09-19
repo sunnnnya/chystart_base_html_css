@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes square {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+            12.5% {
+                transform: rotateX(40deg) rotateY(40deg) rotateZ(0deg);
+            }
+            25% {
+                transform: rotateX(80deg) rotateY(80deg)   rotateZ(0deg);
+            }
+            37.5% {
+                transform: rotateX(120deg) rotateY(120deg) rotateZ(0deg);
+            }
+            50% {
+                transform: rotateX(160deg) rotateY(160deg)   rotateZ(0deg);
+            }
+            62.5% {
+                transform: rotateX(200deg) rotateY(200deg) rotateZ(0deg);
+            }
+            75% {
+                transform: rotateX(240deg) rotateY(240deg)   rotateZ(0deg);
+            }
+            87.5% {
+                transform: rotateX(280deg) rotateY(280deg)   rotateZ(0deg);
+            }
+            100% {
+                transform: rotateX(320deg) rotateY(320deg) rotateZ(0eg);
+            }
+        }
+        @keyframes self_define {
+            100% {
+                transform: rotate3d(1, 1, 0, 360deg);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            perspective: 500px;
+        }
+
+        section {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            background-color: transparent;
+            transform-style: preserve-3d;
+            animation: self_define 9s linear infinite;
+            animation-iteration-count: infinite; /* 表示的是迭代的次数 */
+        }
+
+        div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            text-align: center;
+            line-height: 200px;
+            color: white;
+            font-weight: 700;
+        }
+        
+        div:nth-child(1) {
+            transform: translateZ(100px);
+        }
+
+        div:nth-child(2) {
+            transform: translateY(-100px) rotateX(90deg);
+            background-color: pink;
+        }
+        div:nth-child(3) {
+            transform: translateX(-100px) rotateY(-90deg);
+            background-color: green;
+        }
+        div:nth-child(4) {
+            transform: translateY(100px) rotateX(-90deg);
+            background-color: purple;
+        }
+        div:nth-child(5) {
+            transform: translateX(100px) rotateY(90deg);
+            background-color: blue;
+        }
+        div:nth-child(6) {
+            transform: translateZ(-100px);
+            background-color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </section>
+</body>
+</html>

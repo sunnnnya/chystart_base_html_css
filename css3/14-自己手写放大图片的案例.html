@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            float: left;
+            margin-right: 10px;
+            overflow: hidden;
+        }
+        
+        div img {
+            /* 一定是谁做了过渡给谁加 */
+            transition: all 0.5s;
+        }
+        
+        div:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div><img src="images/zhou.jpg" alt=""></div>
+    <div><img src="images/zhou.jpg" alt=""></div>
+    <div><img src="images/zhou.jpg" alt=""></div>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体查询_运算符</title>
+    <style>
+        /* 通配符选择器 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            height: 200px;
+            background-color: gray;
+            text-align: center;
+            line-height: 200px;
+            color: red;
+            font-size: 80px;
+        }
+        /* 且运算符：表示最小宽度700px最大宽度800px */
+        /* @media (min-width: 700px) and (max-width: 800px) {
+            h1 {
+                background-color: orange;
+            }
+        } */
+    
+        /* @media screen and (min-width: 700px) and (max-width: 800px) {
+            h1 {
+                background-color: orange;
+            }
+        } */
+
+        /* 或运算符：表示最小宽度700px，最大宽度800px */
+        /* @media (max-width: 700px) or (min-width: 800px) {
+            h1 {
+                background-color: green;
+            }
+        } */
+        
+        /* 否定运算符 */
+        @media not screen {
+            h1 {
+                background-color: orange;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>你好啊</h1>
+</body>
+
+</html>

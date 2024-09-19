@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画属性测试</title>
+    <style> 
+        @keyframes move {
+            0% {
+                transform: translate(0, 0) ;
+            }
+            25% {
+                transform: translate(800px, 0);
+            }
+            50% {
+                transform: translate(800px, 400px);
+            }
+            75% {
+                transform: translate(0, 400px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            animation-name: move;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            /* 这有设置了迭代次数为无限之后我们才能设置alternate属性，表示往返操作 */
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+
+        div:hover {
+            animation-play-state: paused;
+        }
+
+        section {
+            position: relative;
+            width: 200px;
+            height: 40px;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+        section::after {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            content: '';
+            width: 8px;
+            height: 8px;
+            border: 2px solid black;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            transform: rotate(-45deg);
+            transition: all 1s;
+        }
+        section:hover::after {
+            transform: rotate(135deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <hr>
+    <section></section>
+</body>
+
+</html>

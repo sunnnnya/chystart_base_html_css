@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3书写三角形</title>
+    <style>
+        div {
+            box-sizing: border-box;
+            position: relative;
+            width: 249px;
+            height: 35px;
+            border: 1px solid #000;
+        }
+
+        /* 伪元素是行内元素   本来的话需要给一个指定的大小  
+        需要使用display转化一下，但是这里时候用到了定位就不需要使用display了*/
+        div::after {
+            content: '';
+            /* 子绝父相的使用  使得不需要使用display */
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            width: 10px;
+            height: 10px;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            transform: rotate(45deg);
+            transition: all 0.2s;
+        }
+        /* 鼠标经过div，里面的三角旋转 */
+        
+        div:hover::after {
+            transform: rotate(225deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <hr />
+</body>
+
+</html>

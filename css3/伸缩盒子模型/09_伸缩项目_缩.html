@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伸缩项目_缩</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 600px;
+            margin: 0 auto;
+            background-color: #888;
+            /* 开启flex布局 */
+            display: flex;
+            /* 设置主轴的方向 */
+            flex-direction: row;
+            /* 设置主轴的换行方式 */
+            flex-wrap: wrap;
+            /* 设置侧轴的对齐方式 */
+            align-content: flex-start;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 200px;
+            background-color: skyblue;
+            /* 伸缩项目——伸 flex-grow的默认值是0 */
+            /* 表示如果有剩余空间的话，他们瓜分剩余的空间 */
+            flex-grow: 1;
+            /* 伸缩项目——伸 flex-shrink的默认值是1 */
+            /* 有自己的计算方式和伸不一样 */
+            flex-shrink: 1;
+
+        }
+        .inner2 {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner">3</div>
+    </div>
+</body>
+
+</html>

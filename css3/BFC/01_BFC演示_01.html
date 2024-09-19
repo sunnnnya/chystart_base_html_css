@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFC演示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .outer {
+            width: 400px;
+            background-color: gray;
+            /* 下面都是会解决子元素出现外边距塌陷的问题 */
+            /* 父元素使用float:left; 子元素不会出现外边距塌陷的问题，但是父元素会脱标，影响下面的标准流的盒子 */
+            /* float: left; */
+            /* position: absolute; */
+            /* display: inline-block; */
+            /* display: table; */
+            /* overflow: hidden; */
+            display: flow-root;
+        }
+        .inner {
+            width: 100px;
+            height: 100px;
+            /* 下面的属性就会出现外边距塌陷问题 */
+            margin: 20px;
+
+        }
+        .inner1 {
+            background-color: orange;
+        }
+        .inner2 {
+            background-color: green;
+        }
+        .inner3 {
+            background-color: deepskyblue;
+        }
+        footer {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner inner1"></div>
+        <div class="inner inner2"></div>
+        <div class="inner inner3"></div>
+    </div>
+    <!-- <footer></footer> -->
+</body>
+
+</html>

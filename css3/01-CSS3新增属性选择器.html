@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3新增属性选择器</title>
+    <style>
+        /* 1：必须是input元素但是同时具有value这个属性 选择这个元素 */
+        /* input[value] {
+            color: red;
+        } */
+
+        /*2：可以根据属性选择器的 属性="属性值" 选择出来 */
+        /* 只选择type="text"文本框的input选择出来 */
+        /* 属性选择器，类选择器，还有伪类选择器 的权重都是0,0,1,0 */
+        
+        /* 属性选择器通常和标签选择器一起使用 */
+        [src] {
+            /* 这个才是属性选择器 */
+            width: 50px;
+        }
+        
+        input[type="text"] {
+            color: pink;
+        }
+        /*3：想要把前四个div改成红色 */
+        /* 方法1：可以使用属性选择器选择出div标签拥有class属性的元素 */
+        
+        div[class] {
+            color: red;
+        }
+        /* 方法2：使用class^=inco 选择属性值  以inco开头  的元素，前提是在div标签中的 */
+        
+        div[class^="inco"] {
+            color: green;
+        }
+        /* 4：使用section[class$="data"] 来找到属性值是以data结尾的元素 然后更改样式 */
+        
+        section[class$="data"] {
+            color: blue;
+        }
+        /* 5：使用*=选择属性中含有指定的属性值的元素 */
+        
+        div[class*="lo"] {
+            color: yellow;
+        }
+        /* 权重问题： 类选择器、属性选择器、伪类选择器的权重是0,0,1,0,*/
+        /* 并集选择器 */
+        
+        div.inco1 {
+            /* 原因是修改不了，因为上面的div[class^="icon"]，这个是标签选择器加上属性选择器  权重是0,0,1,0 + 0,0,0,1 = (0,0,1,1 > 0,0,1,0) */
+            color: orange;
+        }
+        
+        p[class="he"] {
+            /* 权重是0,0,1,1 */
+            color: red;
+        }
+        
+        .he {
+            /* 权重是0,0,1,0 */
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1：利用属性选择器就可以不用借助于类或者id选择器   前提是有一些元素中已经有的属性-->
+    <input type="text" value="请输入用户名">
+    <!-- <input type="text" >  -->
+
+    <!-- 重点一定要记住！！！  2：属性选择器还可以选择 属性=属性值 的某些元素 -->
+    <!-- <input type="text" name="" id=""> -->
+    <!-- <input type="password" name="" id=""> -->
+
+    <!-- 3：属性选择器可以选择属性值开头的某些元素 -->
+    <div class="inco1">小图标1</div>
+    <div class="inco2">小图标2</div>
+    <div class="inco3">小图标3</div>
+    <div class="inco4">小图标4</div>
+    <div>我是打酱油的</div>
+    <br />
+
+    <!-- 4：属性选择器可以选择属性值结尾的某些元素 -->
+    <section class="icon1-data">我是安其拉</section>
+    <section class="icon2-data">我是哥斯拉</section>
+    <section class="icon3-ico">啊我是谁</section>
+    <br />
+
+    <!-- 5：属性选择器可以选择含有某个属性值的某些元素 -->
+    <div class="helloworld">学好HTML</div>
+    <div class="helloasda">学好CSS</div>
+    <div class="heloqweqwe">学好JS</div>
+    <div class="hasasloasdasd">学好java</div>
+    <hr>
+    <p class="he">HelloWorld,I am red color</p>
+
+    <img src="images/zhou.jpg" alt="">
+</body>
+
+</html>

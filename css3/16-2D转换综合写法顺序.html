@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transition: all 0.3s;
+        }
+        
+        div:hover {
+            /* 我们同时有位移和其他属性，我们需要把位移放在最前面 */
+            transform: translate(500px, 200px) rotate(180deg) scale(2);
+            /* 值得注意的是  如果我们需要同时移动x轴和y轴的话 一定是使用transform: translate(.. , ..) */
+            /* 如果分开写的话就会出现覆盖的问题 */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

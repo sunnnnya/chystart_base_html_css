@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D移动之translate3d</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* transform: translateX(100px); */
+            /* 因为这个也叫transform会把上面的给和谐掉 */
+            /* transform: translateY(100px); */
+            transform: translateX(100px) translateY(100px) translateZ(100px);
+            /* 1：translateZ沿着z轴移动 */
+            /* 2：translateZ后面的单位一般都跟px单位 */
+            /* 3：translateZ(100px) 向外移动100px  (向着我们的眼睛移动的) */
+            /* 4：3D移动有简写的方法 */
+            /* transform: translate3d(100px, 100px, 100px); */
+            /* 5:xyz是不能省略的，如果没有的话需要写0 */
+            transform: translate3d(0, 100px, 100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

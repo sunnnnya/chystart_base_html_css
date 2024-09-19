@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片放大的案例</title>
+    <style>
+        div {
+            float: left;
+            margin: 0 10px;
+            overflow: hidden;
+        }
+        
+        div img {
+            /* 注意谁做过渡给谁加，是图片需要过渡则在img里面加 */
+            transition: all 0.4s;
+        }
+        
+        div img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- scale不会影响其他的盒子 -->
+    <div>
+        <a href="#"><img src="images/zhou.jpg" alt=""></a>
+    </div>
+    <div>
+        <a href="#"><img src="images/zhou.jpg" alt=""></a>
+    </div>
+    <div>
+        <a href="#"><img src="images/zhou.jpg" alt=""></a>
+    </div>
+</body>
+
+</html>

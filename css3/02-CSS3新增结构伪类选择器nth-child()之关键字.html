@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器选择多个孩子</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            /* 去掉li的小圆点 */
+            list-style: none;
+        }
+        
+        ul li:nth-child(even) {
+            /* 1：把所有的偶数的孩子选择出来 关键字even偶数 */
+            background-color: orange;
+        }
+        
+        ul li:nth-child(odd) {
+            /* 2：把所有的奇数的孩子选择出来  odd奇数 */
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <!-- 这里面的小li是从1开始的 -->
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ul>
+</body>
+
+</html>

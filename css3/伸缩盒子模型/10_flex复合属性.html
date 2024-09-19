@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex复合属性</title>
+    <style>
+        .outer {
+            width: 600px;
+            height: 700px;
+            margin: 0 auto;
+            background-color: #888;
+            /* 开启flex布局 */
+            display: flex;
+            /* 设置主轴的方向 */
+            flex-direction: row;
+            /* 设置主轴的换行方式 */
+            flex-wrap: wrap;
+            /* 设置侧轴的对齐方式 */
+            align-content: flex-start;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 200px;
+            background-color: skyblue;
+            /* 伸 */
+            /* flex-grow: 1; */
+
+            /* 缩 */
+            /* flex-shrink: 1; */
+
+            /* 设置伸缩项目在主轴上的基准长度 */
+            /* flex-basis: 100px; */
+
+            /* flex：可以拉伸 可以压缩 不设置基准属性 简写为flex: auto */
+            /* flex: auto; */
+
+            /* flex：可以拉伸 可以压缩 设置基准长度为0 简写为flex: 1 */
+            flex: 1;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <div class="inner">3</div>
+    </div>
+</body>
+
+</html>
