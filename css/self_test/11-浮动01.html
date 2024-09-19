@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 清除浮动 */
+        .clearfix::after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+
+        .father {
+            margin: 0 auto;
+            width: 600px;
+        }
+
+        .common {
+            float: left;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            color: black;
+        }
+
+        .father .son1 {
+            background-color: red;
+        }
+
+        .father .son2 {
+            background-color: green;
+        }
+
+        .father .son3 {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father clearfix">
+        <div class="common son1">div</div>
+        <div class="common son2">div</div>
+        <div class="common son3">div</div>
+    </div>
+</body>
+
+</html>

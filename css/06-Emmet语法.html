@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmet语法</title>
+    <style>
+        .one {
+            /* tac */
+            /* text-align: center; */
+
+            /* ti */
+            /* text-indent: 200px; */
+
+            width: 100px;
+            height: 200px;
+            /* 取消下划线 */
+            text-decoration: none;
+            line-height: 26px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- div + Enter -->
+    <div></div>
+
+    <!-- section.red -->
+    <section class="red"></section>
+
+    <!-- section.red{content} -->
+    <section class="red">content</section>
+
+    <!-- .cong 默认会生成一个带有cong的class div标签 p.cong就会生成一个类名叫做cong的class的p标签-->
+    <div class="cong"></div>
+
+    <!-- #two 默认会生成一个id属性的div标签 h1#two会生成一个叫做two的id属性的h1标签-->
+    <div id="two"></div>
+
+    <!-- div*3 3个div标签-->
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <!-- 其中标签的关系： 包含关系、并列关系 -->
+    <!-- ur>li父子级别的标签 -->
+    <ur>
+        <li></li>
+    </ur>
+
+    <!-- h1+p  兄弟级别的标签-->
+    <h1></h1>
+    <p></p>
+
+    <!-- 如果想要生成的多个名称有累加的标签使用.demo$*5 -->
+    <div class="demo1"></div>
+    <div class="demo2"></div>
+    <div class="demo3"></div>
+    <div class="demo4"></div>
+    <div class="demo5"></div>
+
+    <!-- 如果想要生成的多个名称有累加的标签使用p.demo$*3 -->
+    <p class="demo1"></p>
+    <p class="demo2"></p>
+    <p class="demo3"></p>
+
+    <!-- 我们想生成的标签里面默认显示几个文字 p{你好} -->
+    <p>你好</p>
+
+    <!-- div{一定要好好学习}*5 -->
+    <div>一定要好好学习</div>
+    <div>一定要好好学习</div>
+    <div>一定要好好学习</div>
+    <div>一定要好好学习</div>
+    <div>一定要好好学习</div>
+
+    <!-- div{$}*5 -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+
+</body>
+
+</html>

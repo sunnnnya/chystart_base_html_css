@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位堆叠顺序-只有定位的盒子才能使用z-index属性</title>
+    <style>
+        .box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+        }
+
+        .xiongda {
+            z-index: 2;
+            background-color: red;
+        }
+
+        .xionger {
+            /* display: none; */
+            z-index: 3;
+            background-color: green;
+            left: 50px;
+            top: 50px;
+        }
+
+        .qiangge {
+            z-index: 1;
+            background-color: blue;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 多类名的使用，可以把公共的样式放到一个类中，然后再调用自己独有的类 -->
+    <div class="box xiongda">熊大</div>
+    <div class="box xionger">熊二</div>
+    <div class="box qiangge">光头强</div>
+</body>
+
+</html>

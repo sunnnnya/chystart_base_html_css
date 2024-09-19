@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS权重练习2</title>
+    <style>
+        /* .nav li 权重是0,0,1,1 */
+        .nav li {
+            color: red;
+            list-style: none;
+        }
+
+        /* 需求把第一个小li  颜色改为粉色加粗？ */
+        /* .pink 权重是0,0,1,0  .nav .pink 0,0,2,0*/
+        .nav .pink {
+            /* 粉色加粗 */
+            color: pink;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <!-- 其中第一个li是粉色，加粗，然后其他的li是红色 -->
+        <li class="pink">人生四大悲</li>
+        <li>家里没宽带</li>
+        <li>网速不够快</li>
+        <li>手机没流量</li>
+        <li>学校没wifi</li>
+    </ul>
+</body>
+
+</html>

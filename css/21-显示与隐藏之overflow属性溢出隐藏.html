@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow属性</title>
+    <style>
+        .papa {
+            /* 表示溢出的部分会隐藏起来 */
+            /* overflow: hidden; */
+            /* scroll溢出的部分显示滚动条，不溢出也显示滚动条就是拉不动 */
+            /* overflow: scroll; */
+            /* auto溢出的时候才显示滚动条，不溢出不显示滚动条 */
+            /* overflow: auto; */
+            width: 200px;
+            height: 200px;
+            border: 3px solid pink;
+            margin: 100px auto;
+            box-sizing: border-box;
+        }
+        
+        .halo {
+            width: 200px;
+            height: 40px;
+            overflow: auto;
+            border: 1px solid pink;
+            margin: 200px auto;
+        }
+        .photo {
+            width: 400px;
+            height: 400px;
+            border: 1px solid red;
+            overflow: hidden;
+        }
+        .photo img {
+            width: 100%;
+            transition: all 1s;
+        }
+        .photo:hover img{
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="papa">
+         你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你 好你好你好你好你好你好你好你好你好你好你好你好 你好你好你好你好你好你好你 好你好你好你好你好你好
+    </div>
+    <div class="halo">你好年后你好啊实打实大黄蜂拉倒还是盖饭李大师过分了电话费咖喱时代华府古拉花</div>
+    <hr>
+    <div class="photo">
+        <img src="./images/zhou.jpg" alt="图片加载失败！">
+    </div>
+</body>
+
+</html>

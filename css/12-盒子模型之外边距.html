@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型之外边距 - margin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            text-align: center;
+            line-height: 200px;
+            color: orange;
+            font-weight: 700;
+            text-shadow: 2px 2px 2px red;
+        }
+
+        /* .one {
+            margin-bottom: 20px;
+        } */
+        .two {
+            /* margin-top: 20px; */
+
+            /* 表示上下左右的外边距都是30px */
+            /* margin: 30px; */
+            /* 表示上下的外边距是30px，左右外边距是20px */
+            /* margin: 30px 20px; */
+            /* 表示上外边距是10px，左右外边距是20px，下外边距是30px */
+            /* margin: 10px 20px 30px; */
+            /* 表示上外边距是10px，右外边距是20px，下外边距是30px，左外边距是40px */
+            /* margin: 10px 20px 30px 40px; */
+
+            /* 这里面的外边距是针对上一个元素来实现的 */
+            margin: 30px 50px;
+            /* 表示的是上下外边距30px  然后左右外边距50px*/
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 因为都是标准流就会按照上下来排列-->
+    <div class="one">1</div>
+    <div class="two">2</div>
+</body>
+
+</html>

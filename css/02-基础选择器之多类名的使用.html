@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基础选择器-多类名的使用</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        h1:hover {
+            /* 链接伪类选择器link、visited、hover、active */
+            /* 文字阴影的使用-还有盒子阴影 */
+            text-shadow: 2px 2px 2px green;
+        }
+
+        .font {
+            /* font-size属性一定要带有px，font-weight：700不需要带px单位 */
+            font-size: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="red font">刘德华</h1>
+</body>
+
+</html>

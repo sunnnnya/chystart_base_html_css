@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基础选择器-id选择器</title>
+    <style>
+        /* id选择器只能调用一次，别的调用也是可以产生样式的但是行业中是不允许的 */
+        #red {
+            color: red;
+        }
+
+        #green {
+            color: green;
+        }
+
+        #font30 {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="font30">我的字体是30像素</div>
+    <!-- 其中的font30会失效 和 多类名选择器不同的地方 -->
+    <div id="red font30">label</div>
+
+    <div id="red">科比</div>
+
+    <p id="red"> 我可以调用么 </p>
+    <p id="green"> 我可以调用么 </p>
+
+    <h1 id="red">我也可以调用？</h1>
+    <script>
+        let reds = document.querySelectorAll("#red");
+        console.log(reds); // 表示的是伪元素数组，我们可以通过for进行遍历，但是不能使用push,unshift,pop,shift等方法
+    </script>
+</body>
+
+</html>

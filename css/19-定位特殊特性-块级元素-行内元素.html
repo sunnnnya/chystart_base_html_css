@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位特殊特性</title>
+    <!-- 行内元素 -> 行内块元素   -->
+    <!-- 块级元素 -> 行内块元素   -->
+    <!-- 定位和浮动都会把元素变成行内块元素 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        span {
+            /* 行内元素直接设置position: absolute; 就可以设置width: ; height: ; 变成了行内块元素 */
+            /* 否则行内元素设置宽度和高度是无效的 */
+            /* 定位模式 */
+            position: absolute;
+            /* 边移量 */
+            top: 300px;
+            width: 200px;
+            height: 250px;
+            background-color: pink;
+            text-align: center;
+            line-height: 250px;
+            text-shadow: 3px 3px 3px rgba(243, 11, 11, 0.3);
+        }
+
+        div {
+            /* 块级元素拥有了行内块元素的特性，大小默认是内容的多少决定的 */
+            /* 可以理解为浮动 */
+            position: absolute;
+            background-color: skyblue;
+        }
+
+        div:nth-child(2) {
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 拥有了行内块元素的特点 -->
+    <span>123</span>
+    <!-- <span>456</span> -->
+    <div>abcedfasafafasfasf</div>
+    <div>abcedfasafafasfasf</div>
+</body>
+
+</html>

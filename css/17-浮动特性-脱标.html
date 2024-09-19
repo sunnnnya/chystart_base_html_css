@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动特性-脱标</title>
+    <style>
+        .box1 {
+            /* 脱标的盒子会覆盖了后面的标准流的盒子 */
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            text-align: center;
+            line-height: 200px;
+        }
+        
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">浮动的盒子</div>
+    <!-- 但是其中的标准流的盒子里面的文字内容不会被覆盖掉，会被安排到旁边这也是最初设计浮动的目的 -->
+    <div class="box2">1标准流的盒子标准流的盒子标准流的盒子标准流的盒子标准流的盒子标准流的盒子标准流的盒子标准流的盒子标准流的盒子标准流的盒子标准流的盒子标准流的盒子标准流标准流的盒子标准流的盒子标准流的盒子的盒子标准流的盒子标准流的盒子标准流的盒子标准流的盒子标准流的盒子标准流的盒子标准流的盒子标准流的盒子标准流的盒子</div>
+</body>
+
+</html>

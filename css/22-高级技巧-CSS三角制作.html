@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS三角的制作</title>
+    <style>
+        .box1 {
+            /* 想要制作三角形一定要是width: 0;height: 0;否则不行 */
+            width: 0;
+            height: 0;
+            /* border: 10px solid red; */
+            border-top: 10px solid pink;
+            border-right: 10px solid red;
+            border-bottom: 10px solid blue;
+            border-left: 10px solid green;
+        }
+        
+        .box2 {
+            /* 想要设置三角形一定是需要width: 0;height: 0; */
+            width: 0;
+            height: 0;
+            /* 先把四个边设置为透明颜色的，然后把上边框颜色设置为pink */
+            border: 60px solid transparent;
+            /* solid 实线   dotted 点线   dashed  虚线 */
+            /* 会把上面的属性覆盖一部分 */
+            border-top-color: pink;
+            margin: 100px auto;
+        }
+        
+        .jd {
+            position: relative;
+            width: 120px;
+            height: 240px;
+            background-color: pink;
+        }
+        
+        .jd span {
+            /* 运用子绝父相 */
+            position: absolute;
+            right: 15px;
+            top: -10px;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            font-size: 0;
+            border: 5px solid transparent;
+            border-bottom-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="jd">
+        <span></span>
+    </div>
+</body>
+
+</html>

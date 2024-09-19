@@ -1,0 +1,16 @@
+.father {
+  width: 800px;
+  margin: 10px auto;
+  background-color: red;
+}
+.father::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+.father .son {
+  float: left;
+  width: 400px;
+  height: 100px;
+  background-color: orange;
+}

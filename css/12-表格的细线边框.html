@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格的细线边框</title>
+    <style>
+        /* table是块级元素 */
+        table {
+            /* 块级元素指定宽度之后，直接使用margin就可以居中 */
+            margin: 0 auto;
+            /* collapse塌陷 */
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 表格性质：table tr td th thead tbody colspan rowspan -->
+    <table border="1" width="400" height="100">
+        <!-- 行内样式表 -->
+        <caption style="font-weight: 700; color: red; font-size: 30px;">个人信息表</caption>
+        <!-- 表格结构标签 -->
+        <thead>
+            <tr>
+                <!-- 表头单元格标签 -->
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- 单元格的合并colspan / rowspan -->
+                <td>丛虹羽</td>
+                <td>男</td>
+                <td>21</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- 行内块元素下一行显示说明table是块级元素，可以使用margin 0 auto进行表格的居中，如果是行内块元素想要居中，直接父元素使用text-align: center;就行-->
+    <img src="./images/new.png" alt="">
+
+</body>
+
+</html>

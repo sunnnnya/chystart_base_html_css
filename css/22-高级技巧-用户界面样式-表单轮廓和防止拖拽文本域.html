@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单的轮廓和防止拖拽文本域</title>
+    <style>
+        /* 链接伪类选择器 */
+        textarea:hover {
+            outline: none;
+        }
+
+        /* focus伪类选择器 */
+        input:focus {
+            outline: none;
+        }
+
+        textarea {
+            /* 重设大小 none表示不能进行拉伸*/
+            resize: none;
+        }
+
+        /* 伪元素选择器 */
+        textarea::placeholder {
+            font-weight: 700;
+        }
+        /* 属性选择器的权重是0,0,1,0 */
+        input[type^="t"] {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1:取消表单轮廓 outline: none -->
+    <input type="text"><br /><br /><br /><br />
+    <!-- 2:防止拖拽文本域 resize:none -->
+    <textarea name="" id="" cols="30" rows="10" placeholder="请输入文本"></textarea>
+    <!-- textarea是行内元素 -->
+    <!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
+</body>
+
+</html>

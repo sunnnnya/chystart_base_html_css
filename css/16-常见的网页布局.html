@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见的网页布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .top {
+            /* 没有指定宽度就是默认容器的宽度就是100%，也就是浏览器的宽度 */
+            height: 50px;
+            background-color: gray;
+            border-radius: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+        
+        .banner {
+            width: 980px;
+            height: 150px;
+            background-color: pink;
+            margin: 10px auto;
+            text-align: center;
+            line-height: 150px;
+        }
+        
+        .box {
+            width: 980px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: red;
+        }
+        
+        .box li {
+            float: left;
+            width: 237px;
+            height: 300px;
+            background-color: green;
+            /* 浮动的元素可以指定右外边距 */
+            margin-right: 10px;
+            text-align: center;
+            line-height: 300px;
+        }
+        
+        .box .last {
+            margin-right: 0px;
+        }
+        
+        .footer {
+            /* 只要是和浏览器一样宽就不需要设置宽度 */
+            height: 500px;
+            background-color: orange;
+            margin-top: 10px;
+            text-align: center;
+            line-height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">top</div>
+    <div class="banner">banner</div>
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li class="last">4</li>
+        </ul>
+    </div>
+    <div class="footer">footer</div>
+</body>
+
+</html>

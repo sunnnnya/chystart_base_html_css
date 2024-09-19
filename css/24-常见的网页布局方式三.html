@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见的网页布局形式三</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            overflow: hidden;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .top {
+            margin-top: 10px;
+            height: 90px;
+            line-height: 90px;
+            text-align: center;
+            background-color: pink;
+        }
+
+        .smallbox {
+            width: 800px;
+            margin: 10px auto;
+        }
+
+        .banner {
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            background-color: orange;
+        }
+
+        .sm {
+            margin-top: 10px;
+            /* height: 120px; */
+            /* 这里面的overflow表示的是清除浮动的意思 */
+            /* 在sm里面设置了浮动的元素，同时没有设置高就会影响下面的标准流的盒子，所以我们要清除浮动 */
+            /* 在实际开发中推荐使用::after进行清除浮动 */
+            overflow: hidden;
+        }
+
+        .sm ul li {
+            float: left;
+            width: 194px;
+            height: 120px;
+            margin-right: 8px;
+            background-color: purple;
+        }
+
+        .sm ul li:last-child {
+            margin-right: 0;
+        }
+
+        .xm {
+            margin-top: 10px;
+            /* height: 300px; */
+            overflow: hidden;
+        }
+
+        .xm ul li {
+            float: left;
+            width: 194px;
+            height: 300px;
+            margin-right: 8px;
+            background-color: green;
+        }
+
+        .xm ul li:last-child {
+            margin-right: 0px;
+        }
+
+        .footer {
+            height: 200px;
+            background-color: orange;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="top">top</div>
+        <div class="smallbox">
+            <div class="banner">banner</div>
+            <div class="sm">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="xm">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动的盒子只会影响浮动盒子后面的标准流不会影响前面的标准流</title>
+    <style>
+        .box {
+            width: 900px;
+            height: 300px;
+            background-color: pink;
+            /* 水平居中对齐 */
+            margin: 0 auto;
+        }
+        /* 标准流盒子 */
+        .damao {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+        /* 脱标盒子 */
+        .ermao {
+            /* 浮动的盒子只会影响后面的标准流的盒子 */
+            float: left;
+            /* float: right; */
+            width: 200px;
+            height: 150px;
+            background-color: red;
+        }
+        /* 标准流的盒子 */
+        .sanmao {
+            width: 300px;
+            height: 240px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- 其中大毛并不会受到影响 -->
+        <div class="damao">大毛</div>
+        <div class="ermao">二毛</div>
+        <!-- 但是三毛会受到影响 -->
+        <!-- 由于浮动的原因出现：三毛的文字部分是不会被覆盖的，这也是浮动最初的目的，实现文字环绕 -->
+        <div class="sanmao">三毛</div>
+    </div>
+</body>
+
+</html>

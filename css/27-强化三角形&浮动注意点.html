@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>强化三角形和浮动的注意点</title>
+    <style>
+        .triangle {
+            /* 普通的三角形 */
+            width: 0;
+            height: 0;
+            border: 50px solid pink;
+            border-left-color: green;
+            border-right-color: red;
+            border-bottom-color: orange;
+        }
+
+       
+        .tixing {
+            /* 出现镂空的形状 */
+            width: 30px;
+            height: 30px;
+            border: 30px solid pink;
+            border-left-color: green;
+            border-right-color: red;
+            border-bottom-color: orange;
+        }
+
+        .zhijiaosanjiaoxing1 {
+            /* 直角三角形 */
+            width: 0;
+            height: 0;
+            border-top: 200px solid orange;
+            border-right: 60px solid transparent;
+
+        }
+
+        .zhijiaosanjiaoxing2 {
+            /* 直角三角形 */
+            width: 0;
+            height: 0;
+            border-bottom: 200px solid purple;
+            border-left: 60px solid transparent;
+        }
+
+        .zhijiaosanjiaoxing3 {
+            /* 直角三角形 */
+            width: 0;
+            height: 0;
+            border-bottom: 200px solid green;
+            border-right: 60px solid transparent;
+        }
+
+        .zhijiaosanjiaoxing4 {
+            /* 直角三角形 */
+            width: 0;
+            height: 0;
+            border-left: 200px solid transparent;
+            border-top: 60px solid yellow;
+        }
+
+        .zhijiaosanjiaoxing5 {
+            /* 推荐这样写，比较好看 */
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 50px 0 0 70px;
+            border-color: transparent transparent transparent orange;
+        }
+
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: table;
+        }
+
+        .clear::after {
+            clear: both;
+        }
+
+        .box {
+            /* 我们不设置宽度同时也不设置高度，使用浮动撑起来高度，使用行内块元素的text-align: center;使其居中 */
+            /* width: 700px; */
+            /* 没写宽度的话默认的就是浏览器当前的宽度不会，计算完成之后的宽度，一直是浏览的100%宽度 */
+            /* margin: 100px auto; */
+            /* 设置了tac之后，子元素是行内块元素或者行内元素的就会水平居中 */
+            text-align: center;
+        }
+
+        .box a {
+            /* 浮动的元素就不行，是因为脱离了标准流盒子的管理了，inline-block就可以 */
+            /* float: left; */
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            text-align: center;
+            line-height: 36px;
+            color: #333;
+            font-size: 14px;
+            margin: 0 5px;
+        }
+
+        .box .prev,
+        .box .next {
+            width: 85px;
+        }
+
+        .box .current,
+        .box .etc {
+            background-color: #fff;
+            border: 0;
+        }
+
+        .box input {
+            height: 36px;
+            width: 45px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .box button {
+            width: 60px;
+            height: 36px;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+        }
+
+        .bigbox {
+            width: 800px;
+            height: 60px;
+            background-color: green;
+            margin: 0 auto;
+            /* 可以控制里面的行内块元素，水平居中和垂直居中，前提是标准流的盒子 */
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .bigbox div {
+            /* 因为使用了float之后是脱离了标准流，所以tac才不好用的 */
+            /* 行内块元素可以当成文字使用tac，让其居中图片就是例子 */
+            /* float: left;  */
+            display: inline-block;
+            margin: 0 5px;
+            height: 30px;
+            background-color: red;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="triangle"></div>
+    <br />
+    <hr />
+    <div class="tixing"></div>
+    <br />
+    <hr />
+    <div class="zhijiaosanjiaoxing1"></div>
+    <br />
+    <hr />
+    <div class="zhijiaosanjiaoxing2"></div>
+    <br />
+    <hr />
+    <div class="zhijiaosanjiaoxing3"></div>
+    <br />
+    <hr />
+    <div class="zhijiaosanjiaoxing4"></div>
+    <br />
+    <hr />
+    <div class="zhijiaosanjiaoxing5"></div>
+    <br />
+    <hr />
+    <div class="box clearfix">
+        <a href="javascript:;" class="prev">&lt;&lt;&nbsp;上一页</a>
+        <a href="javascript:;" class="current">2</a>
+        <a href="javascript:;">3</a>
+        <a href="javascript:;">4</a>
+        <a href="javascript:;">5</a>
+        <a href="javascript:;">6</a>
+        <a href="javascript:;" class="etc">...</a>
+        <a href="javascript:;" class="next">下一页&nbsp;&gt;&gt;</a>
+        到第<input type="text">页
+        <button>确定</button>
+    </div>
+    <hr />
+    <h6 style="text-align: center;">测试浮动的元素是不是变成了行内块元素</h6>
+    <div class="bigbox">
+        <div>你好啊哈哈哈</div>
+        <div>你好</div>
+        <div>你</div>
+        <div>Hello,world</div>
+        <!-- 行内块和行内元素都可以由父元素的text-align: center; 以及 line-height: xxpx通知，垂直居中和水平居中 -->
+        <span>Hello,CSS</span>
+    </div>
+</body>
+
+</html>

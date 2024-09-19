@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型之边框 border + 颜色 color + 样式 style</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            /* 背景颜色 */
+            /* background-color: red; */
+
+            /* border-width: 5px; */
+            /* 实线边框 */
+            /* border-style: solid; */
+            /* 虚线边框 */
+            /* border-style: dashed; */
+            /* 点线边框 */
+            /* border-style: dotted; */
+
+            /* 边框的颜色 */
+            /* border-color: red; */
+
+            /* 简写 */
+            /* border: 5px solid red; */
+            /* 边框的上面：5像素  实线边框  粉色 */
+            border-top: 10px solid pink;
+            /* 边框的下面： 10像素  点线边框  绿色*/
+            border-bottom: 10px dotted green;
+            /* 然后盒子就会变成300 x 215的大小 */
+            border-left: 10px dashed orange;
+            border-right: 10px solid rgb(211, 15, 211);
+        }
+
+        .change {
+            width: 200px;
+            height: 200px;
+            border: 20px solid pink;
+            border-top-color: red;
+            background-color: orange;
+            border-right-style: dashed;
+        }
+
+        .border {
+            width: 200px;
+            height: 200px;
+            border: 5px solid blue;
+            border-top-color: red;
+            /* 只是层叠了上边框的color给change了  就近原则*/
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 没有使用c3的盒子模型 就会出现撑大盒子的问题 300 x 310 -->
+    <!-- C3的盒子模型box-sizing: border-box content-box -->
+    <div></div>
+    <hr>
+    <div class="change"></div>
+    <hr>
+    <div class="border"></div>
+</body>
+
+</html>

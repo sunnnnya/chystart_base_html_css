@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动元素搭配标准流父盒子</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            /* 去除小圆点 */
+            list-style: none;
+        }
+        
+        .box {
+            width: 1226px;
+            height: 285px;
+            /* background-color: pink; */
+            margin: 100px auto;
+        }
+        
+        .box li {
+            /* 后代选择器 */
+            /* 权重是0,0,1,1 */
+            float: left;
+            width: 296px;
+            height: 285px;
+            background-color: purple;
+            margin-right: 14px;
+            text-align: center;
+            line-height: 285px;
+            color: red  ;
+        }
+        /* 因为设置的每一个小li的margin-right: 14px; 所以会出现最后一个小li会到下面的情况 */
+        /* 操作1：最后一个小li去掉右边距 */
+        /* .box .last {
+            margin-right: 0px;
+        } */
+        
+        .box {
+            /* 利用层叠性覆盖上面的属性 */
+            /* 操作2：把box的盒子变宽一点，多出来一个右边距的距离 前提是大的box盒子的背景一定是transparent的,否则的话背景就会变大，可以被看见*/
+            width: 1240px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 使用ul和li -->
+    <ul class="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="last">4</li>
+    </ul>
+</body>
+
+</html>

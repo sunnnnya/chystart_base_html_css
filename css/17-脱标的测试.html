@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>脱标的测试</title>
+    <style>
+        .box {
+            width: 900px;
+            height: 400px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+        /* 脱标的盒子 */
+        .damao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        /* 标准流的盒子 */
+        .ermao {
+            width: 200px;
+            height: 300px;
+            background-color: green;
+        }
+        /* 标准流的盒子 */
+        .sanmao {
+            width: 200px;
+            height: 400px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- 大毛浮动之后 只会影响后面 的标准流的盒子 -->
+        <div class="damao">大毛</div>
+        <div class="ermao">二毛</div>
+        <!-- 其中的三毛是在二毛的标准流后面接着的 -->
+        <div class="sanmao">三毛</div>
+    </div>
+</body>
+
+</html>

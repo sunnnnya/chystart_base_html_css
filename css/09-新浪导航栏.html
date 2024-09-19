@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新浪微博案例</title>
+    <style>
+        .nav {
+            /* 没有设置宽度的话，默认设置就是100% */
+            height: 41px;
+            /* 设置边框的样式：solid实线、dashed虚线、dotted点线 */
+            border-top: 3px solid #ff8500;
+            border-bottom: 1px solid #edeff0;
+            line-height: 41px;
+            background-color: #fcfcfc;
+        }
+
+        .nav a {
+            /* 把行内元素换成行内块元素   元素的显示模式转换*/
+            display: inline-block;
+            height: 40px;
+            font-size: 12px;
+            color: #4c4c4c;
+            text-decoration: none;
+            /* 其中我们需要指定padding的值，而不是直接指定宽度，这样的效果就会出现内容多就宽的情况，效果是比较好看的 */
+            padding: 0 20px;
+        }
+
+        .nav a:hover {
+            background-color: #ff8500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="#">新浪导航</a>
+        <a href="#">手机新浪网</a>
+        <a href="#">移动客户端</a>
+        <a href="#">微博</a>
+        <a href="#">三个字</a>
+    </div>
+</body>
+
+</html>

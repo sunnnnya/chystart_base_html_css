@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米侧边栏</title>
+    <style>
+        a {
+            /* 1.把a转换为块级元素 */
+            display: block;
+            width: 230px;
+            height: 40px;
+            background-color: #55585a;
+            font-size: 14px;
+            color: #fff;
+            text-decoration: none;
+            /* text-decoration: line-through; */
+            text-indent: 2em;
+            line-height: 40px;
+            /* 其中包含一个技巧就是line-height = height 就会把文字垂直居中 */
+            /* 水平居中的代码 */
+            /* text-align: center; */
+        }
+
+        /* 连接伪类选择器 */
+        a:hover {
+            /* 2.经过链接变换背景颜色 */
+            background-color: #ff6700;
+            color: black;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">手机 电话卡</a>
+    <a href="#">电视 盒子</a>
+    <a href="#">笔记本 平板</a>
+    <a href="#">出行 穿戴</a>
+    <a href="#">智能 路由器</a>
+    <a href="#">健康 儿童</a>
+    <a href="#">耳机 音响</a>
+</body>
+
+</html>

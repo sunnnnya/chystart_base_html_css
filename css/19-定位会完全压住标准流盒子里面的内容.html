@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位会压住标准流的盒子完全压住，文字也是，这也是和浮动的区别</title>
+    <style>
+        /* 通配符选择器 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            /* 只会压住盒子，不会压住盒子里面的文字 */
+            float: left;
+            /* 不仅会压住盒子，并且会直接压住盒子里面的文字 原因是绝对定位(absolution)和固定定位(fixed)会脱标*/
+            /* position: absolute; */
+            /* position: fixed; */
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+        }
+
+        p {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <p>阁下何不同起，扶摇直上九万里</p>
+</body>
+
+</html>

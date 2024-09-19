@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器 - 链接伪类选择器</title>
+    <style>
+        /* 1. 未访问的链接a:link 把没有点击过的链接选择出来设置为黑色*/
+        a:link {
+            color: #333;
+            /* 文本修饰：取消删除线 */
+            text-decoration: none;
+        }
+
+        /*2. a:visited 选择点击过的链接，颜色改为橙色 */
+        a:visited {
+            color: orange;
+        }
+
+        /*3. a:hover 选择鼠标经过的那个链接颜色改变为天蓝色 */
+        a:hover {
+            color: skyblue;
+        }
+
+        /* 4.a:active 选择的是我们鼠标正在按下的还没有弹起鼠标的那个链接 */
+        /* 表示激活的意思，不仅仅只限于使用在链接上 */
+        a:active {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <a href="#">好好学习</a> -->
+    <a href="http://www.baidu.com" target="_blank">百度网站</a>
+</body>
+
+</html>

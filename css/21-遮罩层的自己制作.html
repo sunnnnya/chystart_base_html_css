@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遮罩效果展示</title>
+    <style>
+        .box {
+            /* 父亲使用相对定位，不脱标，相对于自己原来的位置 */
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .box1 {
+            /* 孩子使用绝对定位，脱标，相对于带有定位模式的父亲 */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            background-color: rgba(212, 22, 22, 0.1);
+        }
+
+        /* 一定看好是谁做hover */
+        .box:hover .box1 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+    </div>
+</body>
+
+</html>

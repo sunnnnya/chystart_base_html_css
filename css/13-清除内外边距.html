@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除内外边距</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            /* 清除内外边距的同时也直接会清楚列表中默认的样式 */
+        }
+        
+        /* 因为清除了内外边距所以ul自己的样式也会被去除掉，然后红色就显示不出来了 */
+        ul {
+            background-color: red;
+        }
+        
+        ul li {
+            background-color: green;
+        }
+        
+        span {
+            background-color: pink;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    123
+    <ul>
+        <li>你好</li>
+        <li>你好</li>
+        <li>你好</li>
+        <li>你好</li>
+    </ul>
+    <span>行内元素尽量只设置左右的内外边距</span>
+</body>
+
+</html>

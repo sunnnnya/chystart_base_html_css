@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示与隐藏</title>
+    <style>
+        .baba {
+            /* 隐藏但是会占有原来的位置 */
+            /* visibility: visible; */
+            visibility: hidden;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            text-align: center;
+            line-height: 200px;
+            color: white;
+        }
+        
+        .mama {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            text-align: center;
+            line-height: 200px;
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="baba">猪爸爸</div>
+    <div class="mama">猪妈妈</div>
+    <button>点击我显示猪爸爸</button>
+</body>
+    <script>
+        let btn = document.querySelector('button');
+        let baba = document.querySelector('.baba');
+        btn.addEventListener('click', function() {
+            if (baba.style.visibility === 'hidden') { // 注意我们的等于使用双等或者三等来实现
+                baba.style.visibility = 'visible';
+            } else {
+                baba.style.visibility = 'hidden';
+            }
+        })
+    </script>
+</html>

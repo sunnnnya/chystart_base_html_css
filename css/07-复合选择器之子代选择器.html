@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子代选择器</title>
+    <style>
+        .nav>a {
+            color: red;
+            /* 表示的去掉下划线 */
+            /* text-decoration: none; */
+            /* 表示的是删除线 */
+            text-decoration: line-through;
+        }
+
+        .nav p a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <!-- 选择的是最近一个级别的a  下面的我是儿子1 我是儿子2 都会变颜色-->
+        <!-- 都是第一级别的子儿子 -->
+        <a href="#">我是儿子1</a><br />
+        <a href="#">我是儿子2</a>
+
+        <p>
+            <!-- 这里面的a是孙子 不是直接的儿子所以不会变颜色-->
+            <a href="#">我是孙子</a>
+        </p>
+    </div>
+</body>
+
+</html>

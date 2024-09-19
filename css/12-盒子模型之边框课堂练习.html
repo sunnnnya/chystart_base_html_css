@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课堂边框练习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            /* 给一个200*200的盒子，设置上边框为红色，其余边框为蓝色 */
+            width: 200px;
+            height: 200px;
+            /* border-top: 5px solid red;
+            border-bottom: 5px solid blue;
+            border-left: 5px solid blue;
+            border-right: 5px solid blue; */
+            border: 5px solid blue;
+            /* 会对上面的border进行覆盖 */
+            border-top-color: red;
+            /* 之后就变成了210 x 210 大小的盒子  */
+
+            /* 使用C3的盒子模型就不会受到影响 */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .tb-promo {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            /* background-color: pink; */
+            margin: 100px auto;
+        }
+        
+        .tb-promo img {
+            width: 100%;
+            /* 还可以给图片指定border-radius  设置圆角边框：其中参数可以是1个2个3个4个等 */
+            border-radius: 20px;
+        }
+        /* 并集选择器可以集体声明相同的样式 把下面的两个相同部分的都放在这里，然后分别再单独写自己特有的部分*/
+        /* 多类名的使用。我们可以先写一个自己的样式然后在写自己特殊的样式... */
+        /* .prev,
+        .next {
+
+        } */
+        
+        .prev {
+            /* 加了绝对定位之后，元素就变成了行内块元素 */
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -15px;
+            /* 加了绝对定位的盒子可以直接设置宽度和高度 */
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, .3);
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 0 15px 15px 0;
+        }
+        
+        .next {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -15px;
+            /* 绝对定位之后就变成了行内块元素，可以设置宽度和高度 */
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, .3);
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 15px 0 0 15px;
+        }
+        
+        .promo-nav {
+            position: absolute;
+            bottom: 15px;
+            /* 水平居中的展示 */
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 13px;
+            /* background-color: pink; */
+            background: rgba(255, 255, 255, .3);
+            border-radius: 7px;
+        }
+        
+        .promo-nav li {
+            float: left;
+            /* 元素加了浮动之后，元素的显示模式就变成了行内块元素 */
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 4px;
+            margin: 3px;
+        }
+        
+        .promo-nav li:hover {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tb-promo">
+        <img src="images/taobao.png" alt="对不起图片加载失败咯！">
+        <!-- 左侧按钮箭头 -->
+        <a href="#" class="prev">&lt;</a>
+        <!-- 右侧按钮箭头 -->
+        <a href="#" class="next">&gt;</a>
+        <!-- 小圆点 -->
+        <ul class="promo-nav">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

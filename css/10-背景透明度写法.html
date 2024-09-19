@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景半透明写法rgba</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            /* 透明度是0 ~ 1之间的数值，最后一个数值是透明度 */
+            /* 下面的写法是background的综合写法，可以把有关背景的属性都写在background的属性后面 */
+            /* background: rgba(0, 0, 0, 0.5) */
+            /* CSS3新规定的属性 要求是IE9+才可以实现*/
+            background-color: rgba(245, 16, 16, 0.3);
+            /* background-color: transparent;  transparent透明的 */
+        }
+    </style>
+</head>
+
+<body>
+    <div>隐形的翅膀</div>
+</body>
+
+</html>

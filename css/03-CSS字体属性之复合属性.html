@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS"字体"属性之复合属性</title>
+    <!-- 内部样式表 -->
+    <style>
+        /* 通配符选择器 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .change {
+            /* 
+                font-style: italic;
+                font-weight: 700;
+                font-size: 16px;
+                font-family: 'Microsoft yahei'; 
+            */
+
+            /* 复合写法 */
+            /* font：font-style font-weight font-size/line-height font-family; 一定要按照以上的格式来写 不需要的属性可以省略但是，一定要保留font-size和font-famliy*/
+
+            /* 想要div文字变倾斜  加粗  字号设置为16像素  并且 是微软雅黑 */
+            font: italic 700 16px/16px 'Microsoft yahei';
+        }
+
+        div {
+            font-style: italic;
+        }
+
+        em {
+            /* 把文本格式化标签em变成不倾斜的 */
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 元素的显示模式：块级元素、行内元素、行内块元素display：block、inline、inline-block -->
+    <div class="change">三生三世十里桃花，一心一意百行代码</div>
+    
+    <!-- 段落标签 -->
+    <p>我想看看默认的数值都是多少</p>
+    <div>我是倾斜的字体</div>
+
+    <!-- 文本格式化标签 -->
+    <em>我是不倾斜的字体</em>
+</body>
+
+</html>

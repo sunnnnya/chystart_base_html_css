@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动元素搭配标准流</title>
+    <style>
+        /* 清除浮动；让标准流的父盒子自适应高度 */
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .box {
+            /* 这里面是标准流的盒子，同时没有设置高度 */
+            width: 1200px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+        
+        .left {
+            /* 表示的是左浮动 */
+            float: left;
+            width: 230px;
+            height: 460px;
+            background-color: purple;
+            text-align: center;
+            line-height: 460px;
+        }
+        
+        .right {
+            float: right;
+            width: 970px;
+            height: 460px;
+            background-color: skyblue;
+            text-align: center;
+            line-height: 460px;
+        }
+        footer {
+            margin: 0 auto;
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            text-align: center;
+            line-height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box clearfix">
+        <div class="left">左侧</div>
+        <div class="right">右侧</div>
+    </div>
+    <footer>footer</footer>
+</body>
+
+</html>

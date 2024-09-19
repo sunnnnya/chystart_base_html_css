@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的显示模式 - 块级元素 和 行内元素</title>
+    <style>
+        div {
+            /* 没写宽度，默认的就是父元素的100%。 */
+            width: 100%;
+            height: 200px;
+            background-color: red;
+        }
+
+        h1 {
+            background-color: pink;
+        }
+
+        p {
+            background-color: green;
+        }
+
+        p div {
+            /* 其中设置样式会失效 */
+            color: orange;
+            font-size: 50px;
+        }
+
+        p span {
+            /* 这时候里面设置的样式不会失效 */
+            color: #fff;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 以下都是块级元素 -->
+    <h1>标题</h1>
+    <!-- 表示文字类的标签，里面不能再放块级元素  结果是失效 -->
+    <p><span>80</span></p>
+
+    <div>这是一个盒子</div>
+
+    <!-- 以下都是行内元素 -->
+    <strong>加粗</strong><br />
+    <b>加粗</b> <br />
+
+    <del>中划线</del> <br />
+    <s>中划线</s><br />
+
+    <ins>下划线</ins><br />
+    <u>下划线</u>
+    <br>
+</body>
+
+</html>

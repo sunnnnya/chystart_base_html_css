@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相对定位</title>
+    <style>
+        .box1 {
+            /* 是相对于自己原来的位置移动的 */
+            /* 也是会出现盖住别的盒子的问题 */
+            position: relative;
+            /* 并且是会占有自己原来的位置的 */
+            top: 100px;
+            left: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            /* z-index: 1;只有定位了的盒子才能使用z-index属性 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">我会盖住别的盒子的</div>
+    <div class="box2">我的一部分的文字是不是也会被盖住，答案是会被盖住答案是会被盖住答案是会被盖住答案是会被盖住</div>
+</body>
+
+</html>

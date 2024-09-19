@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS文本外观之装饰文本text-decoration</title>
+    <style>
+        div {
+            /* 下划线   ins*/
+            /* text-decoration: underline; */
+            /* 上划线 */
+            /* text-decoration: overline; */
+            /* 删除线   del*/
+            text-decoration: line-through;
+        }
+
+        /* 标签选择器，取消默认链接的下划线 */
+        a {
+            text-decoration: none;
+            /* 链接显示的颜色 */
+            color: rgb(71, 255, 80);
+        }
+
+        a:hover {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>粉红色的回忆</div>
+    <!-- 外部链接、下载链接、空连接(#、javascript:;)、锚点链接href = "#hello" id = "hello" -->
+    <a href="#">链接</a>
+</body>
+
+</html>

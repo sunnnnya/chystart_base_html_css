@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己的小的练习</title>
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            /* 这里面的url的路径需要好好看看 */
+            src: url('fonts/icomoon.eot?uu32h5');
+            src: url('fonts/icomoon.eot?uu32h5#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?uu32h5') format('truetype'), url('fonts/icomoon.woff?uu32h5') format('woff'), url('fonts/icomoon.svg?uu32h5#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+        
+        .box {
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-left: 0;
+            border-bottom: 0;
+            border-top-width: 200px;
+            border-right-color: red;
+            cursor: pointer;
+        }
+        
+        .el {
+            width: 50px;
+            height: 50px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: purple;
+        }
+        
+        .son {
+            float: left;
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+        }
+        
+        textarea {
+            /* 设置为不可拖动 */
+            resize: none;
+            /* 去除外边线 */
+            outline: none;
+            /* 设置为自动根据文字的多少来检测是否需要滚动条 */
+            overflow: auto;
+        }
+        
+        span {
+            font-family: 'icomoon';
+            font-size: 50px;
+        }
+        
+        span:hover {
+            text-shadow: 2px 2px 2px orange;
+        }
+        
+        .sprite {
+            width: 60px;
+            height: 60px;
+            background: url(images/sprites.png) no-repeat -182px 0;
+        }
+        
+        .brother {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 使用display不占有原来的位置 */
+            /* display: none; */
+            /* 使用visibility是占有原来的位置的 */
+            visibility: hidden;
+        }
+        
+        .brother1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        
+        .father1 {
+            color: purple;
+            font-size: 59px;
+        }
+        /* 权重的练习 */
+        
+        li {
+            /* 权重是0,0,0,1 */
+            color: green!important;
+            /* 但是使用了important  权重变成了最高会直接执行这个*/
+            /* list-style: none; */
+        }
+        /* 子代选择器 */
+        
+        ul>li {
+            /* 权重是0,0,0,2 */
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 三角强化 + 鼠标样式的设置 -->
+    <div class="box"></div>
+    <p></p>
+    <!-- 单行省略号 -->
+    <div class="el">真的假的真的假的真的假的真的假的真的假的真的假的</div>
+    <!-- 浮动围绕 -->
+    <div class="father">
+        <div class="son"></div>
+        你好啊这的假的这的的发了今后的算法办公楼很的这的的发了今后的算法办公楼很的这的的发了今后的算法办公楼很的这的的发了今后的算法办公楼很的这的的发了今后的算法办公楼很多事过分了
+    </div>
+    <p></p>
+    <!-- 文本框去除可拖动 -->
+    <textarea name="" id="" cols="10" rows="10">这的假的这的的发了今后的算法办公楼很的这的的发了今后的算法办公楼这的假的这的的发了今后的算法办公楼很的这的的发了今后的算法办公楼这的假的这的的发了今后的算法办公楼很的这的的发了今后的算法办公楼这的假的这的的发了今后的算法办公楼很的这的的发了今后的算法办公楼这的假的这的的发了今后的算法办公楼很的这的的发了今后的算法办公楼这的假的这的的发了今后的算法办公楼很的这的的发了今后的算法办公楼这的假的这的的发了今后的算法办公楼很的这的的发了今后的算法办公楼这的假的这的的发了今后的算法办公楼很的这的的发了今后的算法办公楼这的假的这的的发了今后的算法办公楼很的这的的发了今后的算法办公楼这的假的这的的发了今后的算法办公楼很的这的的发了今后的算法办公楼这的假的这的的发了今后的算法办公楼很的这的的发了今后的算法办公楼</textarea>
+    <p></p>
+    <!-- 字体图标的使用 -->
+    <span></span>
+    <p></p>
+    <!-- 精灵图的使用 -->
+    <div class="sprite"></div>
+    <p></p>
+    <!-- 隐藏的使用 -->
+    <div class="brother"></div>
+    <div class="brother1"></div>
+    <!-- 继承的关系 -->
+    <div class="father1">
+        <p class="son1">我的color and font-size是会继承父亲的</p>
+    </div>
+    <!-- 权重练习之!important -->
+    <ul>
+        <li>你好</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动之额外标签法</title>
+    <style>
+        .box {
+            /* 注意这里面没有设置大盒子的高度 */
+            width: 800px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+        
+        .damao {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+        }
+        
+        .ermao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        
+        .footer {
+            /* 这里面没有设置宽度默认的就是100%浏览器的宽度 */
+            height: 200px;
+            background-color: black;
+        }
+        
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="damao">大毛</div>
+        <div class="ermao">二毛</div>
+        <!-- 这里面需要注意的是一定是使用块级元素来实现额外标签   div 就可以  span一定是不行的-->
+        <div class="clear"></div>
+    </div>
+    <!-- 添加完清除浮动之后，footer标准流盒子就不会受到影响 -->
+    <div class="footer"></div>
+</body>
+
+</html>

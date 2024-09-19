@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景图片位置之background-position属性</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            margin: 0 auto;
+            width: 600px;
+            height: 600px;
+
+            background-image: url(./images/picture.jpg);
+
+            background-color: pink;
+
+            /* 背景图片不平铺 */
+            background-repeat: no-repeat;
+
+            /* 默认的情况下，背景图片是平铺的 横向和纵向同时平铺*/
+            /* background-repeat: repeat; */
+
+            /* 沿着X轴平铺 */
+            /* background-repeat: repeat-x; */
+
+            /* 沿着Y轴平铺 */
+            /* background-repeat: repeat-y; */
+
+            /* 页面元素既可以添加背景颜色也可以添加背景图片  只不过背景图片会压住背景颜色*/
+
+            /* 如果是1：方位名词right center 和 center right 效果是等价的跟先后顺序没有关系 */
+            /* background-position: center center; */
+            /* 下面两个等价 */
+            /* background-position: right center; */
+            /* background-position: left; */
+
+            /*:2：精确单位 */
+            /* 其中20px表示的是x轴，300px表示的是y轴 */
+            /* background-position: 20px 300px; */
+            /* background-position: 80px; */
+
+            /* 3：混合单位 */
+            /* 表示水平居中，然后垂直是20px */
+            /* 可以记成第一个单位就是x偏移量，第二个单位是y偏移量 */
+            background-position: center 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <!-- 在实际的开发中我们来指定img的位置是比较麻烦的  所以我们经常是给定一个div的盒子  然后指定该盒子的背景图片这样就可以实现位置的移动的margin 0 auto -->
+    <!-- img src alt title width height border -->
+    <!-- <img src="images/picture.jpg" alt=替换文本"> -->
+    <!-- <img src="./images/new.png" alt="图片加载失败！！" title="Hello,World!"/> -->
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体图标的使用</title>
+    <style>
+        /* 字体声明 */
+        @font-face {
+            font-family: 'icomoon';
+            /* 这里面的url的路径需要好好看看 */
+            src: url('fonts/icomoon.eot?uu32h5');
+            src: url('fonts/icomoon.eot?uu32h5#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?uu32h5') format('truetype'), url('fonts/icomoon.woff?uu32h5') format('woff'), url('fonts/icomoon.svg?uu32h5#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        span {
+            /* 一定要和上面的@font-face里面的font-family属性值一样才可以 */
+            /* 并且一定要指明icomoon */
+            /* font的符合属性的写法 */
+            /* font: style weight size family; */
+            /* 这里面的font-family 一定要使用 不使用的话是无效的*/
+            font-family: 'icomoon';
+            font-size: 50px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 这里面的字体图标直接引入就行 -->
+    <span></span>
+    <p></p>
+    <span></span>
+</body>
+
+</html>

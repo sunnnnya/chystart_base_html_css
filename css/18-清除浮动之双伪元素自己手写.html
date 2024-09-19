@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clearfix:after,
+        .clearfix:before {
+            content: '';
+            display: table;
+        }
+        
+        .clearfix:after {
+            clear: both;
+        }
+        
+        .box {
+            width: 1200px;
+            margin: 0 auto;
+            background-color: pink;
+        }
+        
+        .damao {
+            float: left;
+            width: 800px;
+            height: 200px;
+            background-color: red;
+        }
+        
+        .ermao {
+            float: left;
+            width: 410px;
+            height: 300px;
+            background-color: green;
+        }
+        
+        .sanmao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        
+        footer {
+            width: 1200px;
+            height: 300px;
+            background-color: orange;
+            border-radius: 150px;
+            text-align: center;
+            line-height: 300px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box clearfix">
+        <div class="damao"></div>
+        <div class="ermao"></div>
+        <div class="sanmao"></div>
+    </div>
+    <footer>footer</footer>
+</body>
+
+</html>

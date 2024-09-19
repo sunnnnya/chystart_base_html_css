@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子的实际的上下边距，还有外边距塌陷问题</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 250px;
+            height: 500px;
+            background-color: pink;
+            margin: 10px auto;
+            /* overflow: hidden; */
+            /* 孩子会继承这个属性 */
+            text-align: center;
+        }
+
+        .number1 {
+            width: 250px;
+            height: 200px;
+            background-color: red;
+            /* margin-top: 20px; */
+            line-height: 200px;
+            color: purple;
+        }
+
+        .number2 {
+            width: 250px;
+            height: 200px;
+            background-color: green;
+            /* margin-top: 20px; */
+            line-height: 200px;
+            color: orange;
+        }
+
+        .number3 {
+            width: 250px;
+            height: 50px;
+            background-color: skyblue;
+            /* margin-top: 20px; */
+            line-height: 50px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="number1">number1</div>
+        <div class="number2">number2</div>
+        <p class="number3">number3</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS权重练习1</title>
+    <style>
+        .nav {
+            color: red;
+        }
+
+        /* ！！！继承的权重是0 */
+        li {
+            /* 如果我们不使用li标签进行重新标识，其中color属性会被继承下来，还有text-、font-、color */
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 粉色  ： 因为继承为class的父类ul的权重为0， 然后自己写的li的标签的选择器为0,0,0,1所以为粉色-->
+    <ul class="nav">
+        <li>人生四大悲</li>
+        <li>家里没宽带</li>
+        <li>网速不够快</li>
+        <li>手机没流量</li>
+        <li>学校没wifi</li>
+    </ul>
+</body>
+
+</html>

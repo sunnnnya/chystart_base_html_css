@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行内块元素</title>
+    <style>
+        /* focus伪类选择器 */
+        input:focus {
+            /* color: black; */
+            background-color: green;
+        }
+
+        /* 表单是行内块元素但是可以修改宽度和高度 */
+        input {
+            width: 280px;
+            height: 20px;
+        }
+
+        input::placeholder {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="请输入账号" />
+    <input type="password" placeholder="请输入密码" />
+    <button>点击我可以看见密码</button>
+    <script>
+        let btn = document.querySelector("button");
+        let inputs = document.querySelectorAll("input");
+        btn.addEventListener("click", function() {
+            inputs[1].type = "text";
+        })
+    </script>
+</body>
+
+</html>

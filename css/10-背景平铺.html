@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景平铺</title>
+    <style>
+        div {
+            width: 600px;
+            height: 600px;
+            background-image: url(images/picture.jpg);
+            /* 背景图片不平铺 */
+            background-repeat: no-repeat;
+
+            /* 默认的情况下，背景图片是平铺的按照横向和纵向同时平铺 repeat*/
+            /* background-repeat: repeat; */
+
+            /* 沿着X轴平铺 */
+            /* background-repeat: repeat-x; */
+
+            /* 沿着Y轴平铺 */
+            /* background-repeat: repeat-y; */
+
+            /* 表示向x轴移动20px，表示向y轴移动10px */
+            background-position: 20px 10px;
+
+            /* 页面元素既可以添加背景颜色也可以添加背景图片  只不过背景图片会压住背景颜色*/
+            background-color: pink;
+            /* 综合写法： background: color image repeat attachment position */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

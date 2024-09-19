@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己手写秒杀</title>
+    <style>
+        /* 直角三角形的制作 */
+        .three {
+            margin: 100px auto;
+            width: 0;
+            height: 0;
+            border-bottom: 100px solid green;
+            border-left: 50px solid transparent;
+        }
+        
+        .box {
+            /* 使用相对定位，相对的是自己原来的位置 */
+            position: relative;
+            width: 200px;
+            height: 40px;
+            border: 2px solid green;
+            margin: 200px auto;
+            /* box-sizing: border-box; */
+        }
+        
+        .left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 120px;
+            background-color: green;
+            text-align: center;
+            line-height: 40px;
+            color: aliceblue;
+        }
+        
+        .box::after {
+            position: absolute;
+            top: 0;
+            right: 80px;
+            content: '';
+            width: 0;
+            height: 0;
+            border: 20px solid white;
+            border-left-width: 0;
+            border-bottom-width: 0;
+            border-top-width: 40px;
+            border-top-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="three"></div>
+    <div class="box">
+        <div class="left">秒杀</div>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位的脱标属性</title>
+    <style>
+        .father {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            background-color: pink;
+            text-align: center;
+            line-height: 600px;
+        }
+        /* 会脱标然后son1会找到离自己最近一级的父元素，然后摆放位置 */
+        
+        .son1 {
+            /* 脱离的标准流 */
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            text-align: center;
+            /* 如果子元素中没有指定line-height值，默认的子元素就会继承父元素的line-height值，然后导致我们的文字偏下 */
+            line-height: 300px;
+        }
+        
+        .son2 {
+            /* 由于son1出现了脱标的情况，所以son2会按照标准流的方式向上 */
+            /* 同样的道理，脱标也是只是会影响该浮动元素之后的盒子 */
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            line-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son1">son1</div>
+        <div class="son2">son2</div>
+    </div>
+</body>
+
+</html>
