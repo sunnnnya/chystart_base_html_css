@@ -19,12 +19,25 @@
             font-size: 30px;
         }
 
-        div {
+        div.father {
+            position: relative;
             width: 200px;
             height: 200px;
             background-color: purple;
             /* 圆角表框的设置值：如果是一个值表示的是四个角，如果是两个值，第一个值表示的是左上角和右下角，第二个值是左下角和右上角 */
             border-radius: 40px 80px;
+        }
+
+        div.father>div {
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+            left: 50%;
+            margin-left: -50px;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            border-radius: 30px;
         }
 
         section {
@@ -35,7 +48,7 @@
             border-radius: 50%;
         }
 
-        section div {
+        section > div {
             position: absolute;
             width: 200px;
             height: 200px;
@@ -48,13 +61,21 @@
             text-align: center;
             font-weight: 700;
             line-height: 200px;
+            cursor: pointer;
+            &:hover {
+                color: green;
+                text-shadow: 2px 2px 2px greenyellow;
+            }
         }
     </style>
 </head>
 
 <body>
     <p>有点意思</p>
-    <div></div>
+    <div class="father">
+        <div></div>
+    </div>
+    <!-- section 是 h5 中新增的语义话标签 -->
     <section>
         <div>我是靶心</div>
     </section>

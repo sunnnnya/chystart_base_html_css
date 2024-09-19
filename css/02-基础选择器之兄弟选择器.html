@@ -4,33 +4,61 @@
     <meta charset="UTF-8">
     <title>兄弟选择器</title>
     <style>
-        /* 表示选中div仅仅相邻的兄弟p元素(向下找) */
-        div+p {
+        h4 {
             color: orange;
             background-color: green;
+            text-align: center;
+        }
+        /* 表示选中div仅仅相邻的兄弟p元素(向下找) */
+        div+p {
+            color: hotpink;
+            background-color: blue;
             font-size: 20px;
             text-align: center;
             font-weight: 900;
         }
-        /* 修改没有效果，因为和h3紧紧相邻且在下面的是h4 */
+        /* 只会选择 一个 和h3紧紧挨着的p标签 */
         h3+p {
-            color: green;
-            background-color: orange;
+            color: red;
+            background-color: skyblue;
             text-align: center;
             font-size: 20px;
             font-weight: 900;
         }
-        /* 表示的是div的 所有 兄弟p标签（向下看） */
+        /* 表示的是div的 所有 兄弟p标签（向下看） 对上面的 div+p复合选择器进行了覆盖 */
         /*div~p {
-            color: green;
-            background-color: orange;
+            color: #804400;
+            background-color: #96eedd;
             text-align: center;
             font-weight: bold;
             font-size: 20px;
         }*/
+        ul {
+            li { /* 注意是针对的所有的li的下一个兄弟 */
+                list-style: none;
+                color: orange;
+                font-size: 20px;
+                font-weight: 900;
+                ~li { /* 第一个li的所有兄弟，不必要紧紧相依 */
+                    color: green;
+                }
+            }
+        }
+        ol {
+            li {
+                list-style: none;
+                font-size: 30px;
+                font-style: italic;
+                color: orange;
+                +li {
+                    color: green;
+                }
+            }
+        }
     </style>
 </head>
 <body>
+    <h4>简单样例的使用</h4>
     <div>Sunnnnny</div>
     <h3>chystart</h3>
     <p>前端</p>
@@ -40,5 +68,24 @@
     <h4>大连理工大学</h4>
     <div>DLUTER</div>
     <p>dluter</p>
+
+    <hr>
+    <h4>兄弟选择器Xxx~Yyy的使用</h4>
+    <ul>
+        <li>Sunnnnny1</li>
+        <li>Sunnnnny2</li>
+        <li>Sunnnnny3</li>
+        <li>Sunnnnny4</li>
+        <li>Sunnnnny5</li>
+    </ul>
+
+    <h4>兄弟选择器Xxx+Yyy的使用</h4>
+    <ol>
+        <li>Sunnnnny1</li>
+        <li>Sunnnnny2</li>
+        <li>Sunnnnny3</li>
+        <li>Sunnnnny4</li>
+        <li>Sunnnnny5</li>
+    </ol>
 </body>
 </html>

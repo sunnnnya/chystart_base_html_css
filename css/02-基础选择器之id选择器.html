@@ -24,19 +24,16 @@
 
 <body>
     <div id="font30">我的字体是30像素</div>
-    <!-- 其中的font30会失效 和 多类名选择器不同的地方 -->
+    <!-- 其中的font30会失效 和 多类名选择器不同的地方，只有第一个样式会有效 -->
     <div id="red font30">label</div>
 
+    <!-- 一个 html 文件中最好只是用一个 id -->
     <div id="red">科比</div>
 
     <p id="red"> 我可以调用么 </p>
     <p id="green"> 我可以调用么 </p>
 
     <h1 id="red">我也可以调用？</h1>
-    <script>
-        let reds = document.querySelectorAll("#red");
-        console.log(reds); // 表示的是伪元素数组，我们可以通过for进行遍历，但是不能使用push,unshift,pop,shift等方法
-    </script>
 </body>
 
 </html>
