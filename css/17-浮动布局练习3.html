@@ -11,63 +11,72 @@
             height: 3000px;
         }
 
+        /* 标准流的父盒子并未进行浮动， */
         .box {
             width: 1226px;
-            height: 615px;
             background-color: transparent;
             margin: 0 auto;
-        }
-
-        .left {
-            float: left;
-            width: 234px;
-            height: 615px;
-            background-color: purple;
-            text-align: center;
-            line-height: 615px;
-            color: white;
-            font-weight: bold;
-        }
-
-        .right {
-            float: right;
-            width: 992px;
-            height: 615px;
-            background-color: skyblue;
-        }
-
-        /* 子选择器 */
-        .right>div {
-            /* 一浮动全部都需要浮动 */
-            float: left;
-            width: 234px;
-            height: 300px;
-            background-color: pink;
-            margin-left: 14px;
-            margin-bottom: 14px;
-            /* box-shadow: 3px 3px 3px 3px green; */
-        }
-
-        .right>div:hover {
-            /* 伪类选择器  hover 悬停 */
-            /* 第三个值是模糊的程度  第四个值是模糊的大小 */
-            box-shadow: 3px 3px 5px 3px green;
+            &::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .left {
+                float: left;
+                width: 234px;
+                height: 615px;
+                background-color: purple;
+                text-align: center;
+                line-height: 615px;
+                font-weight: bold;
+                font-size: 30px;
+                color: #1DC128;
+                font-style: italic;
+                border-radius: 10px;
+            }
+            .right {
+                float: right;
+                width: 992px;
+                height: 615px;
+                /* 子选择器 */
+                &>div {
+                    /* 一浮动全部都需要浮动 */
+                    float: left;
+                    width: 234px;
+                    height: 300px;
+                    background-color: orange;
+                    color: green;
+                    font-size: 30px;
+                    margin-left: 14px;
+                    text-align: center;
+                    line-height: 300px;
+                    margin-bottom: 14px;
+                    &:hover {
+                        /* 伪类选择器  hover 悬停 */
+                        /* 第三个值是模糊的程度  第四个值是模糊的大小 */
+                        box-shadow: 3px 3px 5px orange;
+                    }
+                }
+            }
         }
 
         footer {
-            margin: 0 auto;
+            margin: 20px auto;
             width: 200px;
             height: 200px;
             background-color: yellow;
             text-align: center;
             line-height: 200px;
+            font-style: italic;
+            font-size: 50px;
+            color: purple;
         }
     </style>
 </head>
 
 <body>
     <div class="box">
-        <div class="left">左青龙</div>
+        <div class="left">left float</div>
         <div class="right">
             <div>1</div>
             <div>2</div>

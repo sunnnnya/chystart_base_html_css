@@ -16,35 +16,41 @@
         .box {
             /* 这里面是标准流的盒子，同时没有设置高度 */
             width: 1200px;
-            background-color: pink;
             margin: 0 auto;
+            .left {
+                /* 表示的是左浮动 */
+                float: left;
+                width: 229px;
+                height: 460px;
+                background-color: purple;
+                text-align: center;
+                line-height: 460px;
+                border-radius: 20px;
+                margin-right: 2px;
+            }
+            .right {
+                float: right;
+                width: 969px;
+                height: 460px;
+                background-color: skyblue;
+                text-align: center;
+                line-height: 460px;
+                border-radius: 20px;
+            }
         }
-        
-        .left {
-            /* 表示的是左浮动 */
-            float: left;
-            width: 230px;
-            height: 460px;
-            background-color: purple;
-            text-align: center;
-            line-height: 460px;
-        }
-        
-        .right {
-            float: right;
-            width: 970px;
-            height: 460px;
-            background-color: skyblue;
-            text-align: center;
-            line-height: 460px;
-        }
+
         footer {
             margin: 0 auto;
             width: 500px;
             height: 500px;
-            background-color: red;
+            background-color: orange;
             text-align: center;
             line-height: 500px;
+            color: green;
+            font-size: 40px;
+            font-style: italic;
+            border:5px solid skyblue;
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -54,6 +60,7 @@
         <div class="left">左侧</div>
         <div class="right">右侧</div>
     </div>
+    <!-- html5 中新增的语义化的标签 -->
     <footer>footer</footer>
 </body>
 

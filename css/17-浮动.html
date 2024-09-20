@@ -10,30 +10,37 @@
         .left,
         .right {
             /* 复合选择器：后代选择器、子代选择器、并集选择器、伪类选择器 */
-            float: left;
+            float: left; /* 浮动之后的元素会脱离标准流的形式存在，但是不会出现覆盖文字的情况 */
             width: 200px;
             height: 200px;
-            background-color: pink;
+            background-color: orange;
             text-align: center;
             line-height: 200px;
+            font-size: 40px;
+            color: yellow;
+            font-style: italic;
         }
-        
+        /* 使用了CSS 的三大特性覆盖 */
         .right {
             float: right;
         }
-        
+
+        /* 标准流的盒子 */
         .box {
-            /* 标准流的盒子 */
             width: 300px;
             height: 300px;
             background-color: red;
+            font-size: 40px;
+            color: #1DC128;
         }
-        
+
+        /* 浮动之后的元素就变成了行内块元素的性质了 */
         .hello {
-            /* 浮动之后的元素就变成了行内块元素的性质了 */
             float: left;
             height: 100px;
             background-color: green;
+            line-height: 100px;
+            color: yellow;
         }
     </style>
 </head>
@@ -41,7 +48,7 @@
 <body>
     <div class="left">左青龙</div>
     <div class="right">右白虎</div>
-    <!-- 请注意其中的真的假的文字位置，浮动之后并不会直接盖住文字，当时设计浮动的时候也是为了，让文字围绕图片而设计的    但是定位会直接覆盖原来的盒子的内容-->
+    <!-- 请注意其中的真的假的文字位置，浮动之后并不会直接盖住文字，当时设计浮动的时候也是为了，让文字围绕图片而设计的 但是定位会直接覆盖原来的盒子的内容-->
     <div class="box">真的假的</div>
     <div class="hello">helloworldwwwwww</div>  <!-- 如果div盒子不指定宽度的话，默认就是内容的宽度了 -->
 </body>

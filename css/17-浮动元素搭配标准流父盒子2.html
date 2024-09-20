@@ -20,13 +20,10 @@
         .box {
             width: 1226px;
             height: 285px;
-            /* background-color: pink; */
             margin: 100px auto;
         }
         
         .box li {
-            /* 后代选择器 */
-            /* 权重是0,0,1,1 */
             float: left;
             width: 296px;
             height: 285px;
@@ -34,7 +31,8 @@
             margin-right: 14px;
             text-align: center;
             line-height: 285px;
-            color: red  ;
+            color: yellow;
+            font-size: 40px;
         }
         /* 因为设置的每一个小li的margin-right: 14px; 所以会出现最后一个小li会到下面的情况 */
         /* 操作1：最后一个小li去掉右边距 */
@@ -51,7 +49,7 @@
 </head>
 
 <body>
-    <!-- 使用ul和li -->
+    <!-- 使用 ul 和 li -->
     <ul class="box">
         <li>1</li>
         <li>2</li>
