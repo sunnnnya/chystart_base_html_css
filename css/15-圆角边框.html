@@ -7,26 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>圆角边框</title>
     <style>
-        /* div {
-            width: 300px;
-            height: 150px;
-            background-color: pink;
-            border-radius: 10px;
-        } */
-        .yuanxing {
+        .circle {
             width: 200px;
             height: 200px;
             background-color: red;
-            /* 圆形radius取一半就可以 */
+            /* 圆形 radius 取一半就可以 */
             /* border-radius: 100px; */
             border-radius: 50%;
         }
 
-        .juxing {
+        .rectangle {
             width: 400px;
             height: 200px;
             background-color: green;
-            /* 圆角矩形radius设置为高度的一半就行 */
+            /* 圆角矩形 radius 设置为高度的一半就行 */
             border-radius: 100px;
         }
 
@@ -34,15 +28,19 @@
             width: 200px;
             height: 200px;
             background-color: orange;
-            /* 和padding和margin的综合属性差不多 */
+            /* 和 padding 和 margin 的综合属性差不多 */
             /* 1:表示的是左上角，右上角，右下角，左下角四个角度为100px */
             /* border-radius: 100px; */
+
             /* 2:表示的是左上角，右下角是20px，右上角，左下角是40px */
             /* border-radius: 20px 40px ; */
+
             /* 3:表示的是左上角是10px，右上角，左下角是20px，右下角是40px */
             /* border-radius: 10px 20px 40px; */
+
             /* 4:表示的是左上角10px，右上角20px，右下角30px，左下角40px */
             /* border-radius: 10px 20px 30px 40px ;   使用这种最好一定要记清楚每一个值代表的位置 */
+
             /* 同时还可以特殊的指定某一个角的border-radius 这种写法与上面的第四个是一样的*/
             border-top-left-radius: 10px;
             border-top-right-radius: 20px;
@@ -53,11 +51,11 @@
 </head>
 
 <body>
-    1.圆形的做法
-    <div class="yuanxing"></div>
-    2.圆角矩形
-    <div class="juxing"></div>
-    3.可以设置不同的圆角
+    <h4>圆形的做法</h4>
+    <div class="circle"></div>
+    <h4>圆角矩形</h4>
+    <div class="rectangle"></div>
+    <h4>可以设置不同的圆角</h4>
     <div class="radius"></div>
 </body>
 

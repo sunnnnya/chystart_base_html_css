@@ -14,14 +14,8 @@
         }
         
         body {
-            /* 先把body的整体背景设置一个颜色 */
+            /* 先把 body 的整体背景设置一个颜色 */
             background-color: #f5f5f5;
-        }
-        
-        a {
-            /* 把a标签重写一下，去掉下划线，然后重新设置一下字体的颜色 */
-            color: #333;
-            text-decoration: none;
         }
         
         .box {
@@ -30,48 +24,47 @@
             background-color: #fff;
             /* 让块级盒子水平居中对齐 */
             margin: 100px auto;
-        }
-        
-        .box img {
-            /* 和父亲一样宽  100% */
-            width: 100%;
-        }
-        
-        .review {
-            height: 70px;
-            font-size: 14px;
-            /* 上下是0，所以对上面没有影响，同时左右是28px */
-            /* 因为这个段落没有 width属性 所以padding不会撑开盒子的宽度 */
-            padding: 0 28px;
-            margin-top: 30px;
-        }
-        
-        .appraise {
-            font-size: 12px;
-            color: #b0b0b0;
-            margin-top: 20px;
-            padding: 0 28px;
-        }
-        
-        .info {
-            font-size: 14px;
-            margin-top: 15px;
-            padding: 0 28px;
-        }
-        
-        .info h4 {
-            display: inline-block;
-            font-weight: 400;
-        }
-        
-        .info span {
-            color: #ff6700;
-        }
-        
-        .info em {
-            font-style: normal;
-            color: #ebe4e0;
-            margin: 0 6px 0 15px;
+            img {
+                /* 和父亲一样宽  100% */
+                width: 100%;
+            }
+            .review {
+                height: 70px;
+                font-size: 14px;
+                /* 上下是0，所以对上面没有影响，同时左右是28px */
+                /* 因为这个段落没有 width属性 所以padding不会撑开盒子的宽度 */
+                padding: 0 28px;
+                margin-top: 30px;
+            }
+            .appraise {
+                font-size: 12px;
+                color: #b0b0b0;
+                margin-top: 20px;
+                padding: 0 28px;
+            }
+            .info {
+                font-size: 14px;
+                margin-top: 15px;
+                padding: 0 28px;
+                h4 {
+                    display: inline-block;
+                    font-weight: 400;
+                    a {
+                        /* 把 a 标签重写一下，去掉下划线，然后重新设置一下字体的颜色 */
+                        color: #333;
+                        text-decoration: none;
+                    }
+                }
+                em {
+                    /* 取消 em 标签中自带的样式，倾斜样式 */
+                    font-style: normal;
+                    color: #ebe4e0;
+                    margin: 0 6px 0 15px;
+                }
+                span {
+                    color: #ff6700;
+                }
+            }
         }
     </style>
 </head>

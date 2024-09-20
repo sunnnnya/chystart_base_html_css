@@ -10,21 +10,23 @@
         div {
             width: 200px;
             height: 200px;
-            background-color: pink;
+            background-color: orange;
             margin: 100px auto;
-            /* box-shadow: 10px 10px 10px -4px rgba(0,0, 0, .3); */
-        }
-
-        div:hover {
-            /* 链接伪类选择器 */
-            /* 第三个值可以理解为 模糊的程度 ，第四个值可以理解为 模糊的大小  */
-            box-shadow: 10px 10px 10px 0px rgba(20, 17, 17, 0.3);
+            font-size: 40px;
+            color: green;
+            text-align: center;
+            line-height: 200px;
+            &:hover {
+                color: red;
+                background-color: skyblue;
+                box-shadow: 3px 3px 4px greenyellow;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div></div>
+    <div>Sunnnnny</div>
 </body>
 
 </html>

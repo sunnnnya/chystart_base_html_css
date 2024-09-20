@@ -14,7 +14,6 @@
         }
 
         li {
-            /* 页面中所有的li的小圆点全部去掉  */
             /* 去掉li里面的小圆点 */
             list-style: none;
         }
@@ -24,36 +23,32 @@
             height: 163px;
             border: 1px solid #cccc;
             margin: 100px auto;
-        }
-
-        .box h3 {
-            /* 因为这里面没有指定宽度，所以不会出现撑宽盒子的问题 */
-            height: 32px;
-            border-bottom: 1px dotted #cccc;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 32px;
-            text-indent: 1em;
-        }
-
-        .box ul li a {
-            font-size: 12px;
-            color: #666;
-            text-decoration: none;
-        }
-
-        .box ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .box ul li {
-            height: 23px;
-            line-height: 23px;
-            padding-left: 20px;
-        }
-
-        .box ul {
-            margin-top: 7px;
+            h3 {
+                /* 没有指明宽度的话，默认就是父亲的宽度 */
+                height: 32px;
+                border-bottom: 1px dotted #cccc;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 32px;
+                /* 文本缩进 */
+                text-indent: 1em;
+            }
+            ul {
+                margin-top: 7px;
+                li {
+                    height: 23px;
+                    line-height: 23px;
+                    padding-left: 20px;
+                    a {
+                        font-size: 12px;
+                        color: #666;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
         }
     </style>
 </head>
