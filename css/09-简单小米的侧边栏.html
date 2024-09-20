@@ -10,26 +10,23 @@
         a {
             /* 1.把a转换为块级元素 */
             display: block;
-            width: 230px;
+            width: 200px;
             height: 40px;
             background-color: #55585a;
             font-size: 14px;
             color: #fff;
             text-decoration: none;
-            /* text-decoration: line-through; */
             text-indent: 2em;
             line-height: 40px;
             /* 其中包含一个技巧就是line-height = height 就会把文字垂直居中 */
             /* 水平居中的代码 */
             /* text-align: center; */
-        }
-
-        /* 连接伪类选择器 */
-        a:hover {
-            /* 2.经过链接变换背景颜色 */
-            background-color: #ff6700;
-            color: black;
-            font-weight: 700;
+            &:hover {
+                /* 2.经过链接变换背景颜色 */
+                background-color: #ff6700;
+                color: black;
+                font-weight: 700;
+            }
         }
     </style>
 </head>

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>复合选择器 - 后代选择器</title>
     <style>
-        /* 我想要把ol里面的小li选出来改为red颜色 */
+        /* 把 ol 中的所有 li 都变成 绿色 */
         ol li {
             color: green;
         }
@@ -42,20 +42,24 @@
         <!-- 只是写ol li 这里面的a链接是不会变颜色的，但是写ul li a是会变颜色的 -->
         <li>你好<a href="#">我是孙子</a></li>
     </ol>
+
+    <hr>
+
     <!-- 无序列表 -->
     <ul>
         <li>我是ul 的孩子</li>
         <li>我是ul 的孩子</li>
         <li>我是ul 的孩子</li>
     </ul>
+
+    <hr>
+
     <ul class="nav">
         <!-- 儿子和孙子都会被选择出来 -->
         <li>我是ul 的孩子</li>
-        <!-- rgb -->
         <a href="#">我是类选择器基础的儿子</a>
         <li>我是ul 的孩子</li>
         <li>我是ul 的孩子</li>
-        <!-- rgb -->
         <li><a href="#">我是类选择器基础的孙子</a></li>
     </ul>
 </body>

@@ -15,14 +15,15 @@
         a {
             /* 把行内元素 a 转换为 块级元素  */
             display: block;
-            width: 150px;
-            height: 150px;
-            background-color: pink;
+            width: 200px;
+            height: 100px;
             /* 设置下外边距为5px */
             margin-bottom: 5px;
+            background-color: orange;
             text-decoration: line-through;
-            color: red;
-            cursor: not-allowed;
+            text-align: center;
+            line-height: 100px;
+            color: green;
         }
 
         div {
@@ -47,7 +48,7 @@
 </head>
 
 <body>
-    <!-- 行内元素一行可以放置多个但是，不能设置宽和高 -->
+    <!-- 行内元素一行可以放置多个但是，不能设置宽和高，由内容撑开 -->
     <a href="#">行内元素转换为块级元素</a>
     <a href="#">行内元素转换为块级元素</a>
 
@@ -60,7 +61,7 @@
     <br>
     <br>
 
-    <!-- 行内块元素一行可以多个了，还可以设置高度和宽度 -->
+    <!-- 行内块元素一行可以多个了，同时还可以设置高度和宽度 -->
     <span>行内元素转换为行内块元素行内元素转换为行内块元素</span>
     <span>行内元素转换为行内块元素</span>
 </body>
