@@ -14,7 +14,7 @@
             border-top: 100px solid transparent;
             border-right: 100px solid red;
             /* 左边和下边的宽度设置为0 */
-            /* border-bottom: 0 solid transparent; */
+            /* border-bottom: 0 solid transparent;*/
             /* border-left: 0 solid transparent; */
         }
 
@@ -24,35 +24,32 @@
             height: 26px;
             border: 1px solid red;
             line-height: 26px;
-        }
-
-        .miaosha {
-            position: relative;
-            float: left;
-            width: 90px;
-            height: 100%;
-            background-color: red;
-            text-align: center;
-            color: #fff;
-            font-weight: 700;
-        }
-
-        .miaosha i {
-            /* 绝对定位，使用浮动和定位之后就变成了 */
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 0;
-            height: 0;
-            border-color: transparent #fff transparent transparent;
-            border-style: solid;
-            border-width: 26px 10px 0 0;
-        }
-
-        .price .origin {
-            font-size: 12px;
-            color: gray;
-            text-decoration: line-through;
+            .miaosha {
+                position: relative;
+                float: left;
+                width: 90px;
+                height: 100%;
+                background-color: red;
+                text-align: center;
+                color: #fff;
+                font-weight: 700;
+                i {
+                    /* 绝对定位，使用浮动和定位之后就变成了 */
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 0;
+                    height: 0;
+                    border-color: transparent #fff transparent transparent;
+                    border-style: solid;
+                    border-width: 26px 10px 0 0;
+                }
+            }
+            .origin {
+                font-size: 12px;
+                color: gray;
+                text-decoration: line-through;
+            }
         }
     </style>
 </head>
