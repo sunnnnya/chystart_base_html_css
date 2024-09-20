@@ -16,9 +16,9 @@
             width: 400px;
             height: 400px;
             background-color: purple;
-            margin-top: 100px;
+            margin-top: 50px;
             /* 解决方案1：为父元素添加over: hidden; */
-            /* overflow: hidden; */
+             overflow: hidden;
             /* 解决方案二：为父元素添加一个上边框 */
             /* border-top: 1px solid red; */
             /* 解决方案三：为父元素定义上内边距 */
@@ -30,8 +30,8 @@
             height: 200px;
             background-color: pink;
             /* 外边距不会修改反而会塌陷 */
-            /* 只有大于100px 的时候才会一起移动,带动父元素一起移动 就会出现塌陷的问题 否则不移动 */
-            /* margin-top: 200px; */
+            /* 只有大于50px 的时候才会一起移动,带动父元素一起移动 就会出现塌陷的问题 否则不移动 */
+             margin-top: 100px;
         }
     </style>
 </head>

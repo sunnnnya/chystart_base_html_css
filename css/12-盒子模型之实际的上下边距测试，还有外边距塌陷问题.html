@@ -17,7 +17,8 @@
             height: 500px;
             background-color: pink;
             margin: 10px auto;
-            /* overflow: hidden; */
+            /* 解决外边距塌陷问题：孩子的外边距如果比父亲大，就会拖动父元素移动 */
+            overflow: hidden;
             /* 孩子会继承这个属性 */
             text-align: center;
         }
@@ -26,27 +27,36 @@
             width: 250px;
             height: 200px;
             background-color: red;
-            /* margin-top: 20px; */
+            margin-top: 20px;
             line-height: 200px;
-            color: purple;
+            color: yellow;
+            font-size: 30px;
+            font-style: italic;
+            &::first-letter {
+                font-size: 60px;
+                color: yellowgreen;
+            }
         }
 
         .number2 {
             width: 250px;
             height: 200px;
             background-color: green;
-            /* margin-top: 20px; */
+            margin-top: 20px;
             line-height: 200px;
             color: orange;
+            font-size: 50px;
         }
 
         .number3 {
             width: 250px;
             height: 50px;
             background-color: skyblue;
-            /* margin-top: 20px; */
+            margin-top: 20px;
             line-height: 50px;
             color: red;
+            font-size: 30px;
+            font-weight: 900;
         }
     </style>
 </head>

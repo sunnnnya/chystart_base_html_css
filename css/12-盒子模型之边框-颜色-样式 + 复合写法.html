@@ -11,7 +11,11 @@
             width: 300px;
             height: 200px;
             /* 背景颜色 */
-            /* background-color: red; */
+            background-color: skyblue;
+            /* C3的盒模型：指定的盒子的宽度和高度就是指定的，边框和内边距都算进去 */
+            /*box-sizing: border-box;*/
+            /* 指定的宽度和高度都是内容的宽度和高度，如果增加边框和内边距会增大盒子的尺寸 */
+            box-sizing: content-box;
 
             /* border-width: 5px; */
             /* 实线边框 */
@@ -58,9 +62,13 @@
     <!-- 没有使用c3的盒子模型 就会出现撑大盒子的问题 300 x 310 -->
     <!-- C3的盒子模型box-sizing: border-box content-box -->
     <div></div>
+
     <hr>
+
     <div class="change"></div>
+
     <hr>
+
     <div class="border"></div>
 </body>
 
