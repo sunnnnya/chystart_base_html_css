@@ -7,18 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>相对定位</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
         .box1 {
             /* 是相对于自己原来的位置移动的 */
-            /* 也是会出现盖住别的盒子的问题 */
+            /* 也是会出现盖住别的盒子的问题，浮动是不会出现覆盖住别的盒子的情况的 */
             position: relative;
-            /* 并且是会占有自己原来的位置的 */
+            /* 并且是会占有自己原来的位置的!!!! */
             top: 100px;
             left: 100px;
             width: 200px;
             height: 200px;
-            background-color: pink;
+            font-size: 20px;
+            text-align: center;
+            line-height: 200px;
+            color: green;
+            background-color: hotpink;
         }
-        
         .box2 {
             width: 200px;
             height: 200px;

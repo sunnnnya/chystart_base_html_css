@@ -7,34 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>绝对定位</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
         /* 相对定位盒子不脱标 */
         .grandfather {
             position: relative;
             width: 800px;
             height: 800px;
             background-color: black;
-        }
-
-        /* 标准流的盒子 */
-        .father {
-            /* position: absolute; */
-            /* position: relative; */
-            width: 600px;
-            height: 600px;
-            background-color: skyblue;
-        }
-        /* 绝对定位的盒子脱标 */
-        .son {
-            /* 此时的son是以grandfather为基准的 */
-            /* 绝对定位是以定位为标准的，如果父辈没有定位，则以浏览器为准 */
-            position: absolute;
-            /* top: 100px; */
-            /* right: 200px; */
-            left: 30px;
-            bottom: 10px;
-            width: 200px;
-            height: 200px;
-            background-color: pink;
+            /* 标准流的盒子 */
+            .father {
+                /* position: absolute; */
+                /* position: relative; */
+                width: 600px;
+                height: 600px;
+                background-color: skyblue;
+                /* 绝对定位的盒子脱标 */
+                .son {
+                    /* 此时的son是以grandfather为基准的 */
+                    /* 绝对定位是以定位为标准的，如果父辈没有定位，则以浏览器为准 */
+                    position: absolute;
+                    /* top: 100px; */
+                    /* right: 200px; */
+                    left: 30px;
+                    bottom: 10px;
+                    width: 200px;
+                    height: 200px;
+                    background-color: pink;
+                }
+            }
         }
     </style>
 </head>
@@ -46,8 +49,6 @@
             <div class="son"></div>
         </div>
     </div>
-
-
 </body>
 
 </html>

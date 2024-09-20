@@ -12,27 +12,29 @@
             margin: 0;
             padding: 0;
         }
-
+        body {
+            height: 3000px;
+        }
         .box {
             /* 只会压住盒子，不会压住盒子里面的文字 */
-            float: left;
+            /* float: left; */
+
             /* 不仅会压住盒子，并且会直接压住盒子里面的文字 原因是绝对定位(absolution)和固定定位(fixed)会脱标*/
-            /* position: absolute; */
-            /* position: fixed; */
+            /*position: absolute;*/
+            position: fixed;
             width: 150px;
             height: 150px;
-            background-color: pink;
+            background-color: green;
         }
-
         p {
-            background-color: red;
+            background-color: orange;
         }
     </style>
 </head>
 
 <body>
     <div class="box"></div>
-    <p>阁下何不同起，扶摇直上九万里</p>
+    <p>啦啦啦啦，我是一个卖报的小行家！！！</p>
 </body>
 
 </html>

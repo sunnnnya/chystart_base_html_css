@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>子绝父相定位使用</title>
     <style>
+        /* 通配符选择器 */
         * {
-            /* 通配符选择器 */
             margin: 0;
             padding: 0;
         }
@@ -18,52 +18,71 @@
             width: 1200px;
             height: 3000px;
             background-color: pink;
-        }
-
-        .son1 {
-            width: 1200px;
-            height: 100px;
-            background-color: red;
-        }
-
-        .son2 {
-            /* 表示相对于原来的位置进行移动 */
-            /* 定位模式 */
-            position: relative;
-            width: 1200px;
-            height: 200px;
-            background-color: purple;
-            /* 边偏移 */
-            top: 100px;
-            left: 200px;
-        }
-
-        .son3 {
-            width: 1200px;
-            height: 100px;
-            background-color: orange;
-        }
-
-        .iner {
-            /* 但是如果父元素使用相对定位进行移动之后，我们的.iner也会一起移动 */
-            /* 使用相对定位实现，元素的移动 */
-            position: absolute;
-            top: 20px;
-            left: 150px;
-            width: 20px;
-            height: 20px;
-            background-color: blue;
-        }
-
-        .card {
-            /* 固定定位 和 相对定位 都会脱标 */
-            position: fixed;
-            left: 50%;
-            margin-left: 600px;
-            margin-top: 200px;
-            width: 30px;
-            height: 50px;
-            background-color: orange;
+            .son1 {
+                width: 1200px;
+                height: 100px;
+                font-size: 50px;
+                text-align: center;
+                line-height: 100px;
+                color: green;
+                font-style: italic;
+                background-color: orange;
+                &::first-letter {
+                    font-size: 60px;
+                }
+            }
+            .son2 {
+                /* 表示相对于原来的位置进行移动 */
+                /* 定位模式 */
+                position: relative;
+                width: 1200px;
+                height: 200px;
+                background-color: yellow;
+                /* 边偏移 */
+                top: 100px;
+                left: 200px;
+                font-size: 50px;
+                text-align: center;
+                line-height: 200px;
+                color: #1DC128;
+                .iner {
+                    /* 但是如果父元素使用相对定位进行移动之后，我们的.iner也会一起移动 */
+                    /* 使用相对定位实现，元素的移动 */
+                    position: absolute;
+                    top: 40px;
+                    left: 250px;
+                    width: 90px;
+                    height: 90px;
+                    font-size: 30px;
+                    line-height: 90px;
+                    font-weight: 700;
+                    color: orange;
+                    background-color: blue;
+                }
+            }
+            .son3 {
+                width: 1200px;
+                height: 100px;
+                font: italic 700 30px 'Microsoft YaHei UI';
+                color: blue;
+                background-color: orange;
+                &::first-letter {
+                    font-size: 40px;
+                }
+            }
+            .card {
+                /* 固定定位 和 相对定位 都会脱标 */
+                position: fixed;
+                left: 50%;
+                margin-left: 602px;
+                margin-top: 200px;
+                width: 35px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                color: orangered;
+                background-color: greenyellow;
+            }
         }
     </style>
 </head>
@@ -78,7 +97,6 @@
         <div class="son3">son3</div>
         <div class="card">card</div>
     </div>
-
 </body>
 
 </html>

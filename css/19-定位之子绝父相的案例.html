@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>定位之子绝父相的由来</title>
     <style>
+        /* 通配符选择器 */
         * {
             margin: 0;
             padding: 0;
         }
-        
+        /* 父亲是绝对定位 */
         .father {
             /* 只是移动父盒子的话，子盒子也是会跟着移动的 */
             position: relative;
@@ -20,20 +21,24 @@
             width: 400px;
             height: 400px;
             background-color: red;
-        }
-        
-        .son {
-            position: absolute;
-            top: 50px;
-            left: 50px;
-            width: 200px;
-            height: 200px;
-            background-color: green;
+            .son {
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                width: 200px;
+                height: 200px;
+                font-size: 30px;
+                color: orange;
+                text-align: center;
+                line-height: 200px;
+                background-color: green;
+            }
         }
     </style>
 </head>
 
 <body>
+    <h4>父亲使用相对定位、 孩子使用绝对定位</h4>
     <div class="father">
         <div class="son">son</div>
     </div>

@@ -8,8 +8,9 @@
     <title>固定在版心的右侧的位置</title>
     <style>
         .fixed {
-            /* 固定定位fixed 和 绝对定位absolute 都是会脱离标准流的 */
+            /* 固定定位 fixed 和 绝对定位 absolute 都是会脱离标准流的 */
             position: fixed;
+
             /* 固定定位相对的是浏览器的可视区域 */
             /* 1:走浏览器宽度的一半 */
             top: 200px;
@@ -19,27 +20,25 @@
             margin-left: 405px;
             width: 50px;
             height: 150px;
-            background-color: skyblue;
-        }
-        
-        .fixed span {
-            position: absolute;
-            font-size: 6px;
-            bottom: 50%;
-            /* 鼠标样式设置：move、text、not-allowed、pointer */
-            cursor: pointer;
+            background-color: orange;
+            span {
+                position: absolute;
+                font-size: 6px;
+                bottom: 50%;
+                /* 鼠标样式设置：move、text、not-allowed、pointer */
+                cursor: pointer;
+            }
         }
         
         .w {
-            /* 版心 */
             width: 800px;
-            height: 500px;
+            height: 1200px;
             background-color: pink;
             margin: 0 auto;
             text-align: center;
             color: white;
             font-weight: 700;
-            line-height: 500px;
+            line-height: 1200px;
         }
     </style>
 </head>
@@ -47,23 +46,10 @@
 <body>
     <div class="fixed">
         <span>
-            点击我会隐藏
+            固定不懂
         </span>
     </div>
     <div class="w">版心盒子 800像素</div>
-    <!-- js代码 -->
-    <script>
-        var mid = document.querySelector("span");
-        var w = document.querySelector(".w");
-        mid.addEventListener("click", function() {
-            // 修改样式属性需要使用style属性
-            if (w.style.display == "none") {
-                w.style.display = "block";
-            } else {
-                w.style.display = "none";
-            }
-        })
-    </script>
 </body>
 
 </html>
