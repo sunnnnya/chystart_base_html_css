@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东秒杀</title>
+    <style>
+        h4 {
+            text-align: center;
+        }
+        div.container {
+            margin: 0 auto;
+            box-sizing: border-box;
+            width: 140px;
+            height: 30px;
+            border: 1px solid red;
+            .left {
+                position: relative;
+                float: left;
+                width: 60px;
+                height: 28px;
+                text-align: center;
+                line-height: 28px;
+                color: orange;
+                background-color: red;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 60px;
+                    width: 0;
+                    height: 0;
+                    border-top: 28px solid red;
+                    border-right: 10px solid transparent;
+                }
+            }
+            .right {
+                float: right;
+                width: 78px;
+                height: 28px;
+                text-align: center;
+                line-height: 28px;
+            }
+        }
+        div.omit {
+            margin: 0 auto;
+            width: 110px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: deepskyblue;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h4>三角形强化练习</h4>
+    <div class="container">
+        <div class="left">
+            &yen;99.9
+        </div>
+        <div class="right">
+            <del>&yen;100.0</del>
+        </div>
+    </div>
+
+    <h4>单行文本溢出显示省略号练习</h4>
+    <div class="omit">你好呀Sunnnnny</div>
+</body>
+</html>
