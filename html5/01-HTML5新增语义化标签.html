@@ -5,49 +5,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML5新增语义化标签</title>
+    <title>HTML5 新增语义化标签</title>
     <style>
-        /* 这个新增的语义化的标签*/
-        header,
-        nav {
-            /* 并集选择器 */
-            width: 800px;
-            height: 120px;
-            background-color: pink;
-            /* 表示圆角的意思 */
-            border-radius: 15px;
-            margin: 15px auto;
-            padding: 5px;
-            text-align: center;
-            line-height: 120px;
-            font-weight: 700;
+        * {
+            margin: 0;
+            padding: 0;
         }
-
-        section {
-            width: 500px;
-            height: 300px;
-            background-color: skyblue;
-            margin: 50px auto;
-            /* 左上角  右上角  右下角  左下角 */
-            border-radius: 5px 10px 15px 25px;
-            padding: 5px;
-            text-align: center;
-            line-height: 300px;
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        header {
+            margin: 10px auto;
+            width: 800px;
+            height: 200px;
             color: green;
-            /* text-shadow表示文字阴影 */
-            /* box-shadow表示盒子阴影 */
-            text-shadow: 3px 3px 3px red;
-            font-weight: bold;
+            background-color: orange;
+            text-align: center;
+            line-height: 200px;
+            font-size: 20px;
+            border-radius: 10px;
+            &::first-letter {
+                font-style: italic;
+                font-size: 30px;
+            }
+        }
+        nav {
+            width: 800px;
+            height: 125px;
+            margin: 0 auto;
+            line-height: 125px;
+            text-align: center;
+            color: deepskyblue;
+            background-color: hotpink;
+            border-radius: 20px;
+            font-size: 20px;
+            &::first-letter {
+                font-style: italic;
+                color: darkblue;
+                font-size: 30px;
+            }
+        }
+        div.main {
+            margin: 10px auto;
+            width: 800px;
+            aside {
+                float: left;
+                width: 198px;
+                height: 300px;
+                color: green;
+                text-align: center;
+                line-height: 300px;
+                background-color: yellow;
+                border-radius: 10px;
+                &::first-letter {
+                    font-style: italic;
+                    font-size: 30px;
+                }
+            }
+            article {
+                float: right;
+                width: 598px;
+                height: 300px;
+                color: yellow;
+                text-align: center;
+                line-height: 300px;
+                background-color: rebeccapurple;
+                border-radius: 10px;
+                &::first-letter {
+                    font-style: italic;
+                    font-size: 30px;
+                }
+            }
+        }
+        footer {
+            margin: 10px auto;
+            width: 800px;
+            height: 200px;
+            color: orange;
+            text-align: center;
+            line-height: 200px;
+            background-color: green;
+            font-size: 20px;
+            &::first-letter {
+                font-size: 30px;
+                font-style: italic;
+            }
         }
     </style>
 </head>
 
 <body>
-    <!-- 都属于是块级元素 -->
-    <header>头部标签</header>
-    <nav>导航栏标签</nav>
-    <section>某个区域</section>
-    <!-- header aside article section footer nav -->
+    <!-- 新增的语义话标签都是块级元素 -->
+    <header>Header</header>
+    <nav>Nav</nav>
+    <div class="main clearfix">
+        <aside>Aside</aside>
+        <article>Article</article>
+    </div>
+    <footer>Footer</footer>
 </body>
 
 </html>
