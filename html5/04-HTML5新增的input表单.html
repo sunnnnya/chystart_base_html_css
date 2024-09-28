@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <!--  我们验证的时候必须添加form表单域   其中的post表示的是隐藏输入的数据 get的提交方式并不会隐藏填入表单的信息，采用拼接字符串的方式，拼接在URL地址的后面  -->
+    <!--  验证时必添加 form 表单域   其中的post表示的是隐藏输入的数据 get的提交方式并不会隐藏填入表单的信息，采用拼接字符串的方式，拼接在URL地址的后面  -->
     <form action="XXXxxx.php" method="post">
         <!-- 无序列表 -->
         <ul>
@@ -33,13 +33,12 @@
             <li>网址：<input type="url"></li>
             <li>日期：<input type="date"></li>
             <li>时间：<input type="time"></li>
-            <!-- <li>月份：<input type="month"></li> -->
-            <!-- <li>周：<input type="week"></li> -->
+            <li>月份：<input type="month"></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;周：<input type="week"></li>
             <li>数量：<input type="number"></li>
             <li>手机号码：<input type="tel"></li>
             <li>搜索：<input type="search"></li>
             <li>颜色：<input type="color"></li>
-
             <!-- 当我们点击提交按钮就可以验证表单了 -->
             <li><input type="submit" value="提交" class="moma"></li>
             <!-- 一定要注意重置的放置的位置  除了有效的区域就会变的不好用 -->
@@ -47,13 +46,6 @@
         </ul>
     </form>
     <hr/>
-    <!-- 有序列表 -->
-    <ol>
-        <li>Hello</li>
-        <li>World</li>
-        <li>Hello,World</li>
-    </ol>
-
 </body>
 
 </html>
