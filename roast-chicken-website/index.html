@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金香烤鸡 | 新鲜烤制，美味直达</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/chicken.png">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <span>金香烤鸡</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#home">首页</a>
+                    <a href="#products">产品</a>
+                    <a href="#about">关于我们</a>
+                    <a href="#contact">联系我们</a>
+                </div>
+                <div class="nav-icons">
+                    <button class="cart-btn" id="cartToggle">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">新鲜出炉，香气四溢</h1>
+                <p class="hero-subtitle">每日现烤，选用优质鸡肉，秘制香料腌制，外酥里嫩，美味无法抗拒</p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn-primary">立即订购</a>
+                    <a href="#about" class="btn btn-secondary">了解更多</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <div class="card-content">
+                        <h3>今日特惠</h3>
+                        <p>购买整只烤鸡送薯条一份</p>
+                        <small>仅限今日</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品展示 -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">我们的产品</h2>
+                <p class="section-subtitle">多种口味，满足不同需求</p>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <!-- 产品将通过JavaScript动态加载 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 特色区域 -->
+    <section class="features">
+        <div class="container">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>新鲜食材</h3>
+                    <p>每日采购新鲜鸡肉，确保食材品质</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>现烤现卖</h3>
+                    <p>下单后开始烤制，保证最佳口感</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>快速配送</h3>
+                    <p>城区内60分钟送达，超时免单</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>秘制配方</h3>
+                    <p>祖传香料配方，风味独特</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 购物车侧边栏 -->
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> 我的购物车</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- 购物车商品将通过JavaScript动态加载 -->
+            <div class="empty-cart" id="emptyCart">
+                <i class="fas fa-shopping-basket"></i>
+                <p>购物车是空的</p>
+                <a href="#products" class="btn btn-outline">去选购商品</a>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>总计：</span>
+                <span class="total-price" id="totalPrice">¥0.00</span>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkoutBtn">去结账</button>
+        </div>
+    </aside>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- 结账模态框 -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-cash-register"></i> 订单确认</h3>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">电话</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">配送地址</label>
+                        <textarea id="address" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">备注</label>
+                        <textarea id="notes" rows="2" placeholder="特殊要求、口味偏好等"></textarea>
+                    </div>
+                    <div class="order-summary">
+                        <h4>订单明细</h4>
+                        <div class="summary-items" id="summaryItems">
+                            <!-- 订单明细将通过JavaScript动态加载 -->
+                        </div>
+                        <div class="summary-total">
+                            <span>订单总额：</span>
+                            <span class="summary-price" id="summaryPrice">¥0.00</span>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelCheckout">返回购物车</button>
+                        <button type="submit" class="btn btn-primary">确认下单</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>金香烤鸡</h3>
+                    <p>致力于为您提供最美味的烤鸡体验，让每一口都充满幸福感。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-douyin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#products">产品</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 400-123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@roastchicken.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 北京市朝阳区美食街88号</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>营业时间</h4>
+                    <ul>
+                        <li>周一至周五：10:00 - 22:00</li>
+                        <li>周六至周日：09:00 - 23:00</li>
+                        <li>节假日照常营业</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 金香烤鸡. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 通知Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
